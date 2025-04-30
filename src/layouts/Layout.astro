@@ -5,10 +5,14 @@ import '@fontsource-variable/roboto-condensed';
 //import robotoCondensedNormal from '@fontsource-variable/roboto-condensed/files/roboto-condensed-latin-wght-normal.woff2?url';
 import './src/styles/global.css'
 import { ClientRouter } from 'astro:transitions';
+import { getLangFromUrl } from '../i18n/utils';
+
+const { title, description } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={ lang }>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -17,7 +21,7 @@ import { ClientRouter } from 'astro:transitions';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 
-		<title>DAGSA Logistics</title>
+		<title>{ title }</title>
 		
 		<!-- <link
 			rel="preload"

@@ -1,0 +1,100 @@
+{
+    "PRUEBA": "Prueba es",
+    "SEO": {
+        "TITLE": "Carlos López | Desarrollador y Programador Web | Portfolio",
+        "DESCRIPTION": "Contrata a Carlos López para crear tu aplicación. Desarrollador y Programador Web. Especializado en transformar ideas en aplicaciones únicas y escalables."
+    },
+    "NAV": {
+        "EXPERIENCE": "Experiencia",
+        "PROJECTS": "Proyectos",
+        "SKILLS": "Tecnologías",
+        "ABOUT": "Sobre mí",
+        "CONTACT": "Contacto"
+    },
+    "SECTION": {
+        "EXPERIENCE": "Experiencia Profesional",
+        "PROJECTS": "Proyectos",
+        "SKILLS": "Tecnologías",
+        "ABOUT": "Sobre mí",
+        "CONTACT": "Contacto"
+    },
+    "HERO": {
+        "BADGE_TEXT": "Disponible para trabajar",
+        "GREETINGS_1": "¡Hey👋!, Soy Carlos",
+        "GREETINGS_2": "<span>+2 años de experiencia.</span> <strong>Ingeniero en computación y desarrollador web.</strong> <span>De Acapulco, Guerrero, México.</span>",
+        "GREETINGS_3": "Especializado en transformar ideas en aplicaciones únicas y escalables.",
+        "EMAIL_BADGE_TEXT": "Contáctame"
+    },
+    "EXPERIENCE": {
+        "CERTIFICATIONS_TEXT1": "Ver Certificaciones vía LinkedIn",
+        "CERTIFICATIONS_TEXT2": "Ver Certificaciones vía Drive",
+        "EXP1": {
+            "TITLE": "Desarrollador FullStack",
+            "DATE_EXP1": "Marzo 2016 - Mayo 2017",
+            "DESC_1": "Desarrollé múltiples módulos para la automatización de operaciones logísticas, incluyendo cierres de viajes, disponibilidad de unidades y jornadas de operadores. Implementé funcionalidades de geoposicionamiento y trazado de rutas, además de la captura de información en el sistema. Utilizando tecnologías como HTML, CSS, JavaScript, C#, .NET y SQL Server."
+        },
+        "EXP2": {
+            "TITLE": "Desarrollador FullStack",
+            "DATE_EXP2": "Septiembre 2017 - Octubre 2018",
+            "DESC_1": "Desarrollé e implementé el sistema de seguimiento de egresados para la institución. Este sistema optimizó la gestión de la información mediante operaciones específicas y posibilitó nuevamente la integración y vinculación de los egresados a la comunidad universitaria, conociendo su estado actual, trayectoria y desempeño profesional. Además, se logró la obtención y actualización del 70% de la información de los egresados, utilizando tecnologías como HTML, Bootstrap, Ruby on Rails y PostgreSQL."
+        },
+        "EXP3": {
+            "TITLE": "Desarrollador FullStack",
+            "DATE_EXP3": "Junio 2019 - Julio 2021",
+            "DESC_1": "Colaboré con equipos multidisciplinarios y multinacionales bajo la metodología Scrum, utilizando herramientas como Git y GitHub para el control de versiones en el desarrollo de los proyectos “GIS Rastreo-Vendedor”, “GIS Ruta-Vendedor”, “GIS Configuraciones” y “GIS Supervisor”. Reduje los costes asociados al uso de Google Maps API en un 35% mediante la integración de LeafletJS, una solución open source, y mejoré la generación y rastreo de rutas de vendedores implementando código escalable y reutilizable, garantizando legibilidad, mantenibilidad, testeo y flexibilidad para que el cliente pudiera alternar entre herramientas según sus necesidades. Utilizando tecnologías como JavaScript, React.js, Bootstrap, Vue.js, Vuetify, Node.js, Express, MongoDB y Redis.",
+            "DESC_2": "Desarrollé un módulo para el registro de unidades e historial de rutas, logrando una gestión organizada y precisa, aumentando las funcionalidades del sistema y facilitando su administración y seguimiento en un 40%, implementando JavaScript, React.js y SASS en el cliente, y una API RESTful con Node.js, Express y MongoDB en el servidor.",
+            "DESC_3": "Desarrollé el proyecto “QR Combos y QR Descuentos” para controlar el uso de promociones, permitiendo una interacción entre usuario y vendedor a través del uso de códigos QR, implementando funcionalidades de administración de promociones, clientes, registros, logs, generación de códigos QR y visualización de promociones mediante dicho código, utilizando tecnologías como JavaScript, Vue.js, Vuetify y Git.",
+            "DESC_4": "Desarrollé un módulo para la gestión de responsables de unidades, consiguiendo la administración y obtención de los datos mediante la integración de una API RESTful con Node.js, Express, MongoDB, React.js y SASS.",
+            "DESC_5": "Elaboré la Landing Page del proyecto “eOrdering”, logrando una interfaz moderna y optimizada para dispositivos móviles, utilizando tecnologías como JavaScript, React.js y CSS."
+        },
+        "EXP4": {
+            "TITLE": "Desarrollador FullStack en soluciones educativas",
+            "DATE_EXP4": "Agosto 2021 - Diciembre 2024",
+            "DESC_1": "Diseñé y desarrollé herramientas para optimizar el registro de calificaciones e historiales académicos, implementando tecnologías como TypeScript, React.js, Tailwind, .NET, Node.js, Prisma, MongoDB y PostgreSQL.",
+            "DESC_2": "Automaticé la gestión de listas y calificaciones de estudiantes, optimizando los procesos administrativos y mejorando la consistencia de los datos en un 60%, utilizando TypeScript, React.js, Tailwind, Node.js y MongoDB."
+        },
+        "EXP5": {
+            "TITLE": "Cursos y Certificaciones",
+            "DESC_1": "Aprendiendo nuevas herramientas para el desarrollo web y explorando las últimas características de otras tecnologías para mantener mis habilidades actualizadas y en constante mejora."
+        }
+    },
+    "PROJECTS": {
+        "DELAY_DESC": "Puede tardar 1 minuto en cargar por primera vez ya que se subió de forma gratuita a Render.",
+        "GEOGUIDE_DESC": "Aplicación para la geolocalización de lugares o puntos de interés mediante términos dados por el usuario, con la funcionalidad de colocar marcadores, dibujar un polígono sobre el mapa, ver detalles del lugar en cuestión y trazar rutas. Implementando librerías tales como Turf.js y Mapbox para el mapa, LottieFiles para las imágenes animadas y Sonner para las notificaciones en pantalla.",
+        "CHAT_APP_DESC": "Aplicación FullStack en tiempo real con funcionalidad para manejar múltiples conversaciones. Haciendo uso de herramientas como Socket IO, Web Sockets y Json Web Token para la autorización y autenticación de usuarios.",
+        "E_TIANGUIS_DESC": "Demostración de funcionalidad de carro de compras. Creada desde cero aplicando React con reducers, Context API para el manejo de estado y notificaciones animadas.",
+        "EXPENSE_CONTROL_DESC": "Aplicación para la administración y organización sencilla de gastos. Desarrollada en TypeScript e implementando Zustand y reducers para el flujo y manipulación de la información en React.",
+        "CALENDAR_APP_DESC": "Planificador de eventos y citas con autenticación y niveles de autorización para la modificación de registros. Aplicación FullStack que implementa NodeJs, Express, MongoDB y Json Web Token para el correcto funcionamiento del Backend, React, React Router y Bootstrap para el Frontend y Redux para la gestión del estado global.",
+        "DASHBOARD_TEMPLATE_DESC": "Plantilla responsiva para paneles de control de usuarios, empleando React y CSS puro.",
+        "JAVASCRIPT_QUIZ_DESC": "Cuestionario de 10 preguntas sobre JavaScript. Codificado en TypeScript e implementando Zustand para la gestión de estado en React y Material UI para el diseño responsivo.",
+        "JOURNAL_APP_DESC": "Aplicación para el registro de viajes, momentos y eventos especiales, con la capacidad de almacenar fotos, descripciones y fechas. Desarrollada con Firebase para el almacenamiento de datos y el manejo de inicio de sesión con Google, Redux para gestionar el estado global y Cloudinary para manejar las imágenes de la aplicación en la nube.",
+        "RICK_AND_MORTY_APP_DESC": "La clásica aplicación que consume la API de Rick y Morty pero ahora con implementaciones tales como: URL Params como estado, skelenton loaders, lazy images, lazy load, filtros dinámicos, búsqueda dinámica, paginación y responsividad.",
+        "ROOM_GREENS_DESC": "Diseñada en Tailwind y React. Landing Page para la venta de articulos con animaciones escalables y reutilizables usando Framer Motion.",
+        "EVOKEEASE_DESC": "Landing Page orientada a la promoción de eventos y conciertos. Desarrollada con Styled Components para el diseño responsivo y Framer Motion para las animaciones de elementos en pantalla.",
+        "YUMRUSH_DESC": "Creada en Tailwind y React. Landing Page con diseño responsivo para restaurante con servicio a domicilio.",
+        "STRATOCLOUD_DESC": "Landing Page responsiva para la venta de servicios. Desarrollada con React y Tailwind."
+    },
+    "SKILLS": {
+        "STATE_MANAGEMENT": "Manejadores de Estado Global",
+        "DATABASES": "Bases de Datos",
+        "OTHERS": "Testing / Otras"
+    },
+    "ABOUT": {
+        "DESC_1": "¡Qué tal!, Mi nombre es Carlos Francisco López Juárez pero mis amigos me dicen Megas. Soy titulado en la carrera de ingeniería en computación, además, termine mis estudios en la carrera en ciencias sociales para la docencia de nivel medio superior en adelante. Mi primer acercamiento con la programación fue cuando quise crear mi propia página web orientada a noticias y reseñas sobre videojuegos, tenía 12 años. A partir de entonces me enfoque y dedique a ese camino tecnológico, desde crear videojuegos en matrices led con Arduino, ",
+        "DESC_2": "hasta llegar a trabajar con equipos de empresas multinacionales en la creación de aplicaciones y soluciones web.",
+        "DESC_3": "",
+        "DESC_4": ""
+    },
+    "CONTACT": {
+        "INFORMATION_TEXT_1": "Por favor lee la siguiente información antes de enviar el formulario:",
+        "INFORMATION_TEXT_2": "*Completa el CAPTCHA antes de enviar el mensaje. Si el CAPTCHA no aparece, por favor recarga la página (puede deberse a errores de conexión).",
+        "INFORMATION_TEXT_3": "*Si el formulario se envió correctamente, se te enviará a una página de confirmación.",
+        "NAME_TEXT": "Nombre completo",
+        "EMAIL_TEXT": "Correo electrónico",
+        "SUBJECT_TEXT": "Asunto",
+        "MESSAGE_TEXT": "Mensaje",
+        "BUTTON_TEXT": "Enviar mensaje"
+
+    },
+    "FOOTER_DESC": "Hecho en Astro"
+}
