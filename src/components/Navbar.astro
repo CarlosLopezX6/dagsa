@@ -1,0 +1,106 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+---
+
+
+<!-- <nav class="bg-green-900 text-white">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="text-xl font-bold">
+            DAGSA LOGISTICS
+        </div>
+        <ul class="flex space-x-6">
+            <li><a href="/" class="hover:text-red-500">Inicio</a></li>
+            <li><a href="/nosotros" class="hover:text-red-500">Nosotros</a></li>
+            <li><a href="/servicios" class="hover:text-red-500">Servicios</a></li>
+            <li><a href="/contacto" class="hover:text-red-500">Contacto</a></li>
+        </ul>
+        <div class="flex items-center space-x-2">
+            <a href="/es" class="text-red-500 font-bold">ES</a>
+            <span>|</span>
+            <a href="/en" class="hover:text-red-500">EN</a>
+        </div>
+    </div>
+</nav> -->
+
+<header id="navbar" class="fixed top-0 w-full px-6 py-4 z-50 bg-[rgba(35,62,29,0.94)] text-white font-light">
+    <div class="mx-14 flex items-center justify-between gap-16 text-xl">
+
+      <div class="relative z-10 w-36 h-20 min-w-[8rem] min-h-[5rem] flex items-start">
+        <img 
+          src="/images/logo_DAGSA.svg"
+          alt="Logo DAGSA"
+          class="absolute w-full h-auto -top-4"
+        />
+      </div>
+
+      <div class="flex justify-center items-center">
+        <nav 
+            id="header-menu"
+            class="
+                fixed w-full h-dvh inset-0 bg-[#151a36]/90 md:text-xl lg:text-xl 
+                flex flex-col items-center justify-center gap-20 
+                -translate-y-full transition-transform duration-300 target:translate-y-0 
+                md:static md:h-[initial] md:bg-[initial] md:flex-row md:translate-y-[initial]"
+            >
+            <HeaderLink href="/">
+                INICIO
+            </HeaderLink>
+            <HeaderLink href="/nosotros/">
+                NOSOTROS
+            </HeaderLink>
+            <HeaderLink href="/servicios/">
+                SERVICIOS
+            </HeaderLink>
+            <HeaderLink href="/contacto/">
+                CONTACTO
+            </HeaderLink>
+        </nav>
+      </div>
+
+      <div class="flex items-center justify-center space-x-2">
+        <a href="/en" class="hover:text-red-500">EN</a>
+        <span>|</span>
+        <a href="/es" class="text-red-500 font-bold">ES</a>
+      </div>
+      <!-- <HeaderLink
+        checkActive={false}
+        href={translatePath('/')}
+        class="relative z-10"
+        aria-label={i18n.HEADER.LOGO}
+      >
+        <Logo
+          class="absolute w-10 m-auto blur-sm opacity-0 transition-opacity duration-300 hover:opacity-100"
+        />
+        <Logo class="w-10" />
+      </HeaderLink>
+      <nav
+        id="header-menu"
+        class="fixed w-full h-dvh inset-0 bg-[#151a36]/90 md:text-xl lg:text-xl flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:flex-row md:translate-y-[initial]"
+      >
+        <HeaderLink class="text__glowing" href={translatePath('/vota/')}>
+          {t('nav.vota')}
+        </HeaderLink>
+        <HeaderLink class="text__glowing" href={translatePath('/info/')}>
+          {t('nav.info')}
+        </HeaderLink>
+        <HeaderLink class="text__glowing" href={translatePath('/archivo/')}>
+          {t('nav.archivo')}
+        </HeaderLink>
+        <LanguageSelector />
+        <Button
+          className="md:py-2 md:ml-auto md:text-base lg:text-base"
+          url="https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view"
+        >
+          {i18n.HEADER_BUTTON}
+        </Button> -->
+        <a href="#header-nav" class="md:hidden absolute top-6 right-6">
+          <!-- <CloseIcon /> -->
+           Cerrar
+        </a>
+      </nav>
+        <a href="#header-menu" class="md:hidden">
+            <!-- <MenuIcon /> -->
+            Menu
+        </a>
+    </div>
+</header>

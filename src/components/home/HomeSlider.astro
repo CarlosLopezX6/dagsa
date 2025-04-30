@@ -1,0 +1,182 @@
+---
+import ChevronLeftIcon from "../icons/ChevronLeftIcon.astro";
+import ChevronRightIcon from "../icons/ChevronRightIcon.astro";
+
+const slides = [
+    {
+        text1: { text: "Maximizamos", style: "big" },
+        text2: { text: "la eficiencia de la cadena de suministros, generando valor", style: "normal" },
+    },
+    {
+        text1: { text: "Importación, exportación y optimización logística:", style: "big" },
+        text2: { text: "Servicios integrales que maximizan el rendimiento de tu cadena de suministros", style: "normal" },
+    },
+    {
+        text1: { text: "Agilizamos las", style: "normal" },
+        text2: { text: "operaciones logísticas", style: "big" },
+        text3: { text: "para maximizar la productividad y el rendimiento", style: "normal" },
+    },
+];
+---
+
+
+<div class="slider-wrapper relative flex items-center justify-center text-white px-8 text-center">
+
+    <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        class="absolute top-0 left-0 w-full h-full object-cover z-0"
+    >
+        <source src="/homeVideo.webm" type="video/webm">
+            Tu navegador no soporta videos HTML5.
+    </video>
+
+    <div class="absolute top-0 left-0 w-full h-full bg-black/30 z-10"></div>
+        
+    <div class="max-w-2xl uppercase relative z-10">
+        <p
+            id="slider-text1"
+            class={`fade show text-shadow-lg/30 ${slides[0].text1.style === "big" ? "font-bold text-3xl md:text-5xl lg:text-5xl" : "text-sm md:text-xl lg:text-4xl"}`}
+        >
+            {slides[0].text1.text}
+        </p>
+        <p
+            id="slider-text2"
+            class={`fade show text-shadow-lg/30 ${slides[0].text2.style === "big" ? "font-bold text-3xl md:text-5xl lg:text-5xl" : "text-sm md:text-xl lg:text-4xl"}`}
+        >
+            {slides[0].text2.text}
+        </p>
+        <p
+            id="slider-text3"
+            class={`fade show text-shadow-lg/30 ${slides[0].text3 ? (slides[0].text3.style === "big" ? "font-bold text-3xl md:text-5xl lg:text-5xl" : "text-sm md:text-xl lg:text-4xl") : "hidden"}`}
+        >
+            {slides[0].text3?.text ?? ""}
+        </p>
+    </div>
+    
+    <button id="prev-slide" class="absolute left-0 md:left-0 lg:left-40 xl:left-80 top-1/2 -translate-y-1/2 text-[#DF0A14] cursor-pointer z-10">
+        <ChevronLeftIcon class="size-12 md:size-16" />
+    </button>
+    <button id="next-slide" class="absolute right-0 md:right-0 lg:right-40 xl:right-80 top-1/2 -translate-y-1/2 text-[#DF0A14] cursor-pointer z-10">
+        <ChevronRightIcon class="size-12 md:size-16" />
+    </button>
+
+    <div class="absolute cursor-pointer bottom-8 right-0 md:right-8 size-28 md:size-32 lg:size-36 z-10">
+        <img 
+            src="/images/botonWhatsapp.webp" 
+            alt="whatsapp"
+            class="w-full h-full object-contain"
+        />
+    </div>
+</div>
+
+
+<script type="module">
+
+    function initSlider() {
+        let currentIndex = 0;
+
+        const text1El = document.getElementById('slider-text1');
+        const text2El = document.getElementById('slider-text2');
+        const text3El = document.getElementById('slider-text3');
+        const prevBtn = document.getElementById('prev-slide');
+        const nextBtn = document.getElementById('next-slide');
+
+        const slides = [
+            {
+                text1: { text: "Maximizamos", style: "big" },
+                text2: { text: "la eficiencia de la cadena de suministros, generando valor", style: "normal" },
+            },
+            {
+                text1: { text: "Importación, exportación y optimización logística:", style: "big" },
+                text2: { text: "Servicios integrales que maximizan el rendimiento de tu cadena de suministros", style: "normal" },
+            },
+            {
+                text1: { text: "Agilizamos las", style: "normal" },
+                text2: { text: "operaciones logísticas", style: "big" },
+                text3: { text: "para maximizar la productividad y el rendimiento", style: "normal" },
+            },
+        ];
+
+        function applyText(el, slideText) {
+            if (slideText) {
+                el.textContent = slideText.text;
+                el.className = `fade text-shadow-lg/30 ${slideText.style === 'big' ? 'font-bold text-3xl md:text-5xl lg:text-5xl' : 'text-sm md:text-xl lg:text-4xl'} show`;
+            } else {
+                el.textContent = '';
+                el.className = 'fade text-shadow-lg/30 hidden';
+            }
+        }
+
+        function showSlide(index) {
+            text1El.classList.remove('show');
+            text2El.classList.remove('show');
+            text3El.classList.remove('show');
+
+            setTimeout(() => {
+                const slide = slides[index];
+                applyText(text1El, slide.text1);
+                applyText(text2El, slide.text2);
+                applyText(text3El, slide.text3);
+            }, 600);
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetInterval();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetInterval();
+        });
+
+        let interval = setInterval(nextSlide, 4000);
+
+        function resetInterval() {
+            clearInterval(interval);
+            interval = setInterval(nextSlide, 4000);
+        }
+    }
+
+    if (document.readyState === 'complete') {
+        initSlider();
+    } else {
+        window.addEventListener('DOMContentLoaded', initSlider);
+    }
+
+    //Volver a iniciar cuando Astro cambia la vista
+    document.addEventListener('astro:after-swap', () => {
+        initSlider();
+    });
+
+</script>
+
+
+<style>
+    .slider-wrapper {
+        background: #eee;
+        min-height: 100vh;
+    }
+
+    .fade {
+        opacity: 0;
+        transition: opacity 0.6s ease;
+    }
+
+    .fade.show {
+        opacity: 1;
+    }
+</style>
