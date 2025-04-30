@@ -84,6 +84,8 @@ const slides = [
         const prevBtn = document.getElementById('prev-slide');
         const nextBtn = document.getElementById('next-slide');
 
+        if (!text1El || !text2El || !text3El || !prevBtn || !nextBtn) return;
+
         const slides = [
             {
                 text1: { text: "Maximizamos", style: "big" },
@@ -167,7 +169,7 @@ const slides = [
 
 <style>
     .slider-wrapper {
-        background: #eee;
+        background: #a6a6a6;
         min-height: 100vh;
     }
 
