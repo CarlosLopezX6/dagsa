@@ -1,26 +1,32 @@
 ---
 import ChevronLeftIcon from "../icons/ChevronLeftIcon.astro";
 import ChevronRightIcon from "../icons/ChevronRightIcon.astro";
+import { getI18N } from "../../i18n";
+
+
+const { currentLocale } = Astro;                   
+const i18n = getI18N( { currentLocale } );
+
 
 const slides = [
     {
-        text1: { text: "Maximizamos", style: "big" },
-        text2: { text: "la eficiencia de la cadena de suministros, generando valor", style: "normal" },
+        text1: { text: i18n.HOME.SLIDE1.TEXT1, style: "big" },
+        text2: { text: i18n.HOME.SLIDE1.TEXT2, style: "normal" },
     },
     {
-        text1: { text: "Importación, exportación y optimización logística:", style: "big" },
-        text2: { text: "Servicios integrales que maximizan el rendimiento de tu cadena de suministros", style: "normal" },
+        text1: { text: i18n.HOME.SLIDE2.TEXT1, style: "big" },
+        text2: { text: i18n.HOME.SLIDE2.TEXT2, style: "normal" },
     },
     {
-        text1: { text: "Agilizamos las", style: "normal" },
-        text2: { text: "operaciones logísticas", style: "big" },
-        text3: { text: "para maximizar la productividad y el rendimiento", style: "normal" },
+        text1: { text: i18n.HOME.SLIDE3.TEXT1, style: "normal" },
+        text2: { text: i18n.HOME.SLIDE3.TEXT2, style: "big" },
+        text3: { text: i18n.HOME.SLIDE3.TEXT3, style: "normal" },
     },
 ];
 ---
 
 
-<div class="slider-wrapper relative flex items-center justify-center text-white px-8 text-center">
+<div class="slider-wrapper relative flex items-center justify-center text-white px-8 text-center" data-locale={currentLocale}>
 
     <video 
         autoplay 
@@ -73,7 +79,13 @@ const slides = [
 </div>
 
 
-<script type="module">
+<script type="module" is:inline data-astro-rerun>
+ 
+    import { getI18N } from "/src/i18n/index.js";
+
+    const locale = document.querySelector(".slider-wrapper")?.dataset.locale || "es";
+    const i18n = getI18N({ currentLocale: locale });
+
 
     function initSlider() {
         let currentIndex = 0;
@@ -88,17 +100,17 @@ const slides = [
 
         const slides = [
             {
-                text1: { text: "Maximizamos", style: "big" },
-                text2: { text: "la eficiencia de la cadena de suministros, generando valor", style: "normal" },
+                text1: { text: i18n.HOME.SLIDE1.TEXT1, style: "big" },
+                text2: { text: i18n.HOME.SLIDE1.TEXT2, style: "normal" },
             },
             {
-                text1: { text: "Importación, exportación y optimización logística:", style: "big" },
-                text2: { text: "Servicios integrales que maximizan el rendimiento de tu cadena de suministros", style: "normal" },
+                text1: { text: i18n.HOME.SLIDE2.TEXT1, style: "big" },
+                text2: { text: i18n.HOME.SLIDE2.TEXT2, style: "normal" },
             },
             {
-                text1: { text: "Agilizamos las", style: "normal" },
-                text2: { text: "operaciones logísticas", style: "big" },
-                text3: { text: "para maximizar la productividad y el rendimiento", style: "normal" },
+                text1: { text: i18n.HOME.SLIDE3.TEXT1, style: "normal" },
+                text2: { text: i18n.HOME.SLIDE3.TEXT2, style: "big" },
+                text3: { text: i18n.HOME.SLIDE3.TEXT3, style: "normal" },
             },
         ];
 

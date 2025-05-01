@@ -1,5 +1,12 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+
+import { getRouteFromUrl, useTranslatedPath, getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const route = getRouteFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
 ---
 
 
@@ -42,25 +49,37 @@ import HeaderLink from "./HeaderLink.astro";
                 -translate-y-full transition-transform duration-300 target:translate-y-0 
                 md:static md:h-[initial] md:bg-[initial] md:flex-row md:translate-y-[initial]"
             >
-            <HeaderLink href="/">
-                INICIO
+            <HeaderLink href={translatePath('/')} class="uppercase">
+              {t('nav.inicio')}
             </HeaderLink>
-            <HeaderLink href="/nosotros/">
-                NOSOTROS
+            <HeaderLink href={translatePath('/nosotros')} class="uppercase">
+              {t('nav.nosotros')}
             </HeaderLink>
-            <HeaderLink href="/servicios/">
-                SERVICIOS
+            <HeaderLink href={translatePath('/servicios')} class="uppercase">
+              {t('nav.servicios')}
             </HeaderLink>
-            <HeaderLink href="/contacto/">
-                CONTACTO
+            <HeaderLink href={translatePath('/contacto')} class="uppercase">
+              {t('nav.contacto')}
             </HeaderLink>
         </nav>
       </div>
 
       <div class="flex items-center justify-center space-x-2">
-        <a href="/en" class="hover:text-red-500">EN</a>
+        <HeaderLink 
+          href={translatePath(`/${route ? route : ''}`, "en")} 
+          class="hover:text-red-500"
+                                                 
+        >
+          EN
+        </HeaderLink>
         <span>|</span>
-        <a href="/es" class="text-red-500 font-bold">ES</a>
+        <HeaderLink 
+          href={translatePath(`/${route ? route : ''}`, "es")} 
+          class="hover:text-red-500"
+
+        >
+          ES
+        </HeaderLink>
       </div>
       <!-- <HeaderLink
         checkActive={false}

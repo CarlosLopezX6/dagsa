@@ -1,23 +1,30 @@
+---
+import { getI18N } from "../../i18n";
+
+const { currentLocale } = Astro;                   
+const i18n = getI18N( { currentLocale } );
+---
+
+
 <section class="w-full bg-[#cecece] py-20 px-8 lg:px-0">
     <div class="grid md:grid-cols-1 lg:grid-cols-3 mx-auto gap-10">
       
         <div class="lg:col-span-2">
             <h2 class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase mb-12 text-white text-shadow-lg/40 text-center lg:text-right">
-                Nuestra Historia
+                { i18n.ABOUT.HISTORIA_SECTION.TITLE }
             </h2>
             
             <div class="lg:ml-24 xl:ml-70 text-[#233E1D] text-justify">  
                 <p class="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-6">
-                    Despachos y Asesoría del Golfo (DAGSA)
+                    { i18n.ABOUT.HISTORIA_SECTION.DESCRIPTION.TEXT1 }
                     <span class="font-normal">
-                        es una empresa líder en servicios de logística especializada, con un enfoque estratégico a
-                        <strong>nivel nacional e internacional.</strong>
+                        { i18n.ABOUT.HISTORIA_SECTION.DESCRIPTION.TEXT2 }
+                        <strong>{ i18n.ABOUT.HISTORIA_SECTION.DESCRIPTION.TEXT3 }</strong>
                     </span>
                 </p>
         
                 <p class="text-base md:text-lg lg:text-xl xl:text-2xl">
-                    Destacamos por la experiencia en la gestión de productos de acero, aluminio, materias primas esenciales para
-                    la industria automotriz tales como bobinas, placas, perfiles y productos similares, ofreciendo soluciones integrales que optimizan la cadena de suministros agregando valor a sus clientes.
+                    { i18n.ABOUT.HISTORIA_SECTION.DESCRIPTION.TEXT4 }
                 </p>
             </div>
         </div>

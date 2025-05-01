@@ -1,100 +1,95 @@
 {
-    "PRUEBA": "Prueba",
-    "SEO": {
-        "TITLE": "Carlos López | Web Developer and Programmer | Portfolio",
-        "DESCRIPTION": "Hire Carlos López to create your application. Web Developer and Programmer. Specialized in transforming ideas into unique and scalable applications."
-    },
-    "NAV": {
-        "EXPERIENCE": "Experience",
-        "PROJECTS": "Projects",
-        "SKILLS": "Skills",
-        "ABOUT": "About",
-        "CONTACT": "Contact"
-    },
-    "SECTION": {
-        "EXPERIENCE": "Professional Experience",
-        "PROJECTS": "Projects",
-        "SKILLS": "Skills",
-        "ABOUT": "About Me",
-        "CONTACT": "Contact"
-    },
-    "HERO": {
-        "BADGE_TEXT": "Open to Work",
-        "GREETINGS_1": "Hello there👋!, I'm Carlos",
-        "GREETINGS_2": "<span>+2 years of experience.</span> <strong>Computer engineer and web developer.</strong> <span>From Acapulco, Guerrero, México.</span>",
-        "GREETINGS_3": "Specialized in transforming ideas into unique and scalable applications.",
-        "EMAIL_BADGE_TEXT": "Contact me"
-    },
-    "EXPERIENCE": {
-        "CERTIFICATIONS_TEXT1": "View Certifications via LinkedIn",
-        "CERTIFICATIONS_TEXT2": "View Certifications via Drive",
-        "EXP1": {
-            "TITLE": "FullStack Developer",
-            "DATE_EXP1": "March 2016 - May 2017",
-            "DESC_1": "Developed multiple modules to automate logistics operations, including trip closures, unit availability, and operator work schedules. Implemented route mapping and tracking functionalities, as well as data capture for the system. Utilized technologies such as HTML, CSS, JavaScript, C#, .NET, and SQL Server."
+    "HOME": {
+        "LAYOUT": {
+            "TITLE": "Home | DAGSA Logistics"
         },
-        "EXP2": {
-            "TITLE": "FullStack Developer",
-            "DATE_EXP2": "September 2017 - October 2018",
-            "DESC_1": "Developed and implemented the institution’s graduate tracking system, optimizing information management through specific operations. This system facilitated the reintegration and connection of alumni with the university community, providing insights into their current status, career paths, and professional performance. Successfully acquired and updated 70% of alumni data using technologies such as HTML, Bootstrap, Ruby on Rails, and PostgreSQL."
+        "SLIDE1": {
+            "TEXT1": "We maximize",
+            "TEXT2": "the efficiency of the supply chain, creating value"
         },
-        "EXP3": {
-            "TITLE": "FullStack Developer",
-            "DATE_EXP3": "June 2019 - July 2021",
-            "DESC_1": "Collaborated with multidisciplinary and multinational teams following the Scrum methodology, using Git and GitHub for version control in the development of the “GIS Vendor-Tracking”, “GIS Route-Vendor”, “GIS Configurations” and “GIS Supervisor” projects. Reduced Google Maps API costs by 35% by integrating LeafletJS, an open-source solution, and improved route generation and vendor tracking functionality by implementing scalable and reusable code. This ensured readability, maintainability, testing, and flexibility for clients to switch between tools. Utilized technologies such as JavaScript, React.js, Bootstrap, Vue.js, Vuetify, Node.js, Express, MongoDB, and Redis.",
-            "DESC_2": "Developed a module for unit registration and route history, achieving organized and accurate management, enhancing system functionality, and improving administration and monitoring by 40%. Implemented JavaScript, React.js and SASS on the client side and a RESTful API with Node.js, Express, and MongoDB on the server side.",
-            "DESC_3": "Developed the “QR Combos and QR Discounts” project to manage promotions, enabling user-vendor interaction through QR codes. Implemented features for promotion, client and logs management, QR code generation, and promotion visualization using JavaScript, Vue.js, Vuetify, and Git.",
-            "DESC_4": "Developed a module for unit responsibility management, allowing data administration and retrieval through the integration of a RESTful API with Node.js, Express, MongoDB, React.js, and SASS.",
-            "DESC_5": "Created the Landing Page for the “eOrdering” project, achieving a modern and mobile-optimized interface using JavaScript, React.js, and CSS."
+        "SLIDE2": {
+            "TEXT1": "Import, export, and logistics optimization:",
+            "TEXT2": "Comprehensive services that maximize the performance of your supply chain"
         },
-        "EXP4": {
-            "TITLE": "FullStack Developer in educational solutions",
-            "DATE_EXP4": "August 2021 - December 2024",
-            "DESC_1": "Designed and developed tools to optimize the management of grades and academic records using technologies such as TypeScript, React.js, Tailwind, .NET, Node.js, Prisma, MongoDB, and PostgreSQL.",
-            "DESC_2": "Automated the management of student lists and grades, optimizing administrative processes and improving data consistency by 60% using TypeScript, React.js, Tailwind, Node.js, and MongoDB."
+        "SLIDE3": {
+            "TEXT1": "We streamline",
+            "TEXT2": "logistics operations",
+            "TEXT3": "to maximize productivity and performance"
         },
-        "EXP5": {
-            "TITLE": "Courses and Certifications",
-            "DESC_1": "Learning new tools for web development and exploring the latest features of other technologies to keep my skills updated and constantly improving."
+        "SOLUCIONES_SECTION": {
+            "TITLE1": "Comprehensive solutions",
+            "TITLE2": "for your needs",
+            "CARD1": "Import and export",
+            "CARD2": "Logistics",
+            "CARD3": "Supply chain optimization"
+        },
+        "CLIENTES_SECTION_TEXT": "Clients who trust us"
+    },
+
+    "ABOUT": {
+        "LAYOUT": {
+            "TITLE": "About Us | DAGSA Logistics"
+        },
+        "HERO_SECTION": {
+            "TITLE": "Get to know us",
+            "TEXT": "We are the strategic partner for your industry, offering you efficient and secure solutions for maritime, land, and rail transportation."
+        },
+        "HISTORIA_SECTION": {
+            "TITLE": "Our story",
+            "DESCRIPTION": {
+                "TEXT1": "Despachos y Asesoría del Golfo (DAGSA)",
+                "TEXT2": "is a leading company in specialized logistics services, with a strategic focus at",
+                "TEXT3": "both national and international levels.",
+                "TEXT4": "We stand out for our experience in managing steel products, aluminum, and essential raw materials for the automotive industry, such as coils, plates, profiles, and similar products, offering comprehensive solutions that optimize the supply chain while adding value to our clients."
+            }
+        },
+        "MISION_SECTION": {
+            "MISION": {
+                "TITLE": "Mission",
+                "TEXT1": "To provide specialized logistics services that enhance the efficiency, competitiveness, and growth of our clients."
+            },
+            "VISION": {
+                "TITLE": "Vision",
+                "TEXT1": "To establish long-lasting collaborative relationships with the industry by delivering practical and valuable solutions in the maritime, land, and rail sectors."
+            },
+            "VALORES": {
+                "TITLE": "Values",
+                "VALOR1": {
+                    "TITLE": "Professionalism",
+                    "TEXT1": "We have a highly trained and specialized team."
+                },
+                "VALOR2": {
+                    "TITLE": "Integrity",
+                    "TEXT1": "We operate with transparency and ethics in all our actions."
+                },
+                "VALOR3": {
+                    "TITLE": "Customer focus",
+                    "TEXT1": "We tailor our services to the specific needs of each client."
+                },
+                "VALOR4": {
+                    "TITLE": "Efficiency",
+                    "TEXT1": "We ensure timely delivery and effective resource management."
+                }
+            }
         }
     },
-    "PROJECTS": {
-        "DELAY_DESC": "It may take 1 minute to load for the first time since it was uploaded for free to Render.",
-        "GEOGUIDE_DESC": "Application for geolocation of places or points of interest based on terms provided by the user, with functionalities such as placing markers, drawing polygons on the map, viewing details of the specific location, and tracing routes. Implementing libraries such as Turf.js and Mapbox for the map, LottieFiles for animated images, and Sonner for on-screen notifications.",
-        "CHAT_APP_DESC": "Real-time FullStack application with functionality to handle multiple conversations. Making use of tools such as Socket IO, Web Sockets and Json Web Token for user authorization and authentication.",
-        "E_TIANGUIS_DESC": "Shopping cart functionality demo. Built from scratch using React with reducers, Context API for state management and animated notifications.",
-        "EXPENSE_CONTROL_DESC": "Application for simple expense management and organization. Developed in TypeScript and implementing Zustand and reducers for information flow and manipulation in React.",
-        "CALENDAR_APP_DESC": "Event and appointment scheduler with authentication and authorization levels for record modification. FullStack application implementing NodeJs, Express, MongoDB and Json Web Token for the correct functioning of the Backend, React, React Router and Bootstrap for the Frontend and Redux for the global state management.",
-        "DASHBOARD_TEMPLATE_DESC": "Responsive Dashboard Template. Using React and pure CSS.",
-        "JAVASCRIPT_QUIZ_DESC": "10-question quiz about JavaScript. Coded in TypeScript and implementing Zustand for state management in React and Material UI for responsive design.",
-        "JOURNAL_APP_DESC": "Application for recording trips, moments and special events, with the ability to store photos, descriptions and dates. Developed with Firebase for data storage and login management with Google, Redux as a global state manager and Cloudinary to manage the application images in the cloud.",
-        "RICK_AND_MORTY_APP_DESC": "The classic Rick and Morty API consuming application but now with implementations such as: URL Params as state, skelenton loaders, lazy images, lazy load, dynamic filters, dynamic search, pagination and responsiveness.",
-        "ROOM_GREENS_DESC": "Designed in Tailwind and React. Landing Page for the sale of articles with scalable and reusable animations using Framer Motion.",
-        "EVOKEEASE_DESC": "Landing Page oriented to the promotion of events and concerts. Developed with Styled Components for the responsive design and Framer Motion for the on-screen element animations.",
-        "YUMRUSH_DESC": "Created in Tailwind and React. Landing Page with responsive design for a restaurant with home delivery service.",
-        "STRATOCLOUD_DESC": "Responsive Landing Page for selling services. Developed with React and Tailwind."
-    },
-    "SKILLS": {
-        "STATE_MANAGEMENT": "State Management",
-        "DATABASES": "Databases",
-        "OTHERS": "Testing / Others"
-    },
-    "ABOUT": {
-        "DESC_1": "Hello! My name is Carlos Francisco López Juárez, but my friends call me Megas. I hold a degree in Computer Engineering, and I also completed studies in Social Sciences focused on teaching at the high school level and beyond. My first experience with programming was when I wanted to create my own website dedicated to news and reviews about video games—I was 12 years old. Since then, I have focused and committed myself to this technological path, from creating video games on LED matrices with Arduino, ",
-        "DESC_2": "to working with teams at multinational companies on the development of web applications and solutions.",
-        "DESC_3": "",
-        "DESC_4": ""
-    },
-    "CONTACT": {
-        "INFORMATION_TEXT_1": "Please read the following information before submitting the form:",
-        "INFORMATION_TEXT_2": "*Complete the CAPTCHA before sending the form. If the CAPTCHA does not appear, please reload the page (may be due to connection errors).",
-        "INFORMATION_TEXT_3": "*If the form was sent successfully, you will be sent to a confirmation page.",
-        "NAME_TEXT": "Full name",
-        "EMAIL_TEXT": "Email",
-        "SUBJECT_TEXT": "Subject",
-        "MESSAGE_TEXT": "Message",
-        "BUTTON_TEXT": "Send message"
 
+    "SERVICES": {
+        "LAYOUT": {
+            "TITLE": "Services | DAGSA Logistics"
+        }
     },
-    "FOOTER_DESC": "Made in Astro"
+
+    "CONTACT": {
+        "LAYOUT": {
+            "TITLE": "Contact | DAGSA Logistics"
+        }
+    },
+
+
+
+    "SEO": {
+        "TITLE": "",
+        "DESCRIPTION": ""
+    }
 }

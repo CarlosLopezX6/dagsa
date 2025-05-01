@@ -1,3 +1,11 @@
+---
+import { getI18N } from "../../i18n";
+
+const { currentLocale } = Astro;                   
+const i18n = getI18N( { currentLocale } );
+---
+
+
 <section>
     <div class="grid grid-cols-3 auto-rows-min my-12">
 
@@ -11,29 +19,28 @@
             </div>
         </div>
         <div class="bg-[#dddb0a] py-2">
-            <h2 class="text-[#233E1D] text-6xl font-semibold">MISIÓN</h2>
+            <h2 class="text-[#233E1D] text-6xl font-semibold uppercase">{ i18n.ABOUT.MISION_SECTION.MISION.TITLE }</h2>
         </div>
         <div></div>
         <div></div>
         <p class="text-2xl text-justify text-[#233E1D] py-8 font-light">
-            Brindar servicios de logística especializada que impulsen la eficiencia, competitividad y crecimiento de nuestros clientes.
+            { i18n.ABOUT.MISION_SECTION.MISION.TEXT1 }
         </p>
         <div></div>
 
 
         <div></div>
-        <div class="bg-[#dddb0a] text-[#233E1D] text-6xl font-semibold py-2 text-right">VISÍON</div>
+        <div class="bg-[#dddb0a] text-[#233E1D] text-6xl font-semibold py-2 text-right uppercase">{ i18n.ABOUT.MISION_SECTION.VISION.TITLE }</div>
         <div class="bg-[#dddb0a]"></div>
         <div></div>
         <p class="text-2xl text-justify text-[#233E1D] py-8 font-light">
-            Establecer relaciones de colaboración duraderas con la industria, 
-            entregando soluciones prácticas y de valor en los sectores marítimo, terrestre y ferroviario.
+            { i18n.ABOUT.MISION_SECTION.VISION.TEXT1 }
         </p>
         <div></div>
 
 
         <div class="bg-[#dddb0a]"></div>
-        <div class="bg-[#dddb0a] text-[#233E1D] text-6xl font-semibold py-2">VALORES</div>
+        <div class="bg-[#dddb0a] text-[#233E1D] text-6xl font-semibold py-2 uppercase">{ i18n.ABOUT.MISION_SECTION.VALORES.TITLE }</div>
         <div class="relative bg-[#dddb0a] flex justify-end">
             <img 
                 src="/images/about/maquina.webp" 
@@ -44,27 +51,27 @@
         <div></div>
         <div class="text-2xl text-justify text-[#233E1D] py-8 font-light">
             <div class="space-y-4">
-                <p class="text-[#233E1D] font-semibold tracking-[4px]">PROFESIONALISMO</p>
+                <p class="text-[#233E1D] font-semibold tracking-[4px] uppercase">{ i18n.ABOUT.MISION_SECTION.VALORES.VALOR1.TITLE }</p>
                 <p class="text-2xl text-justify text-[#233E1D] font-light">
-                    Contamos con un equipo altamente capacitado y especializado.
+                    { i18n.ABOUT.MISION_SECTION.VALORES.VALOR1.TEXT1 }
                 </p>
             </div>
             <div class="mt-8 space-y-4">
-                <p class="text-[#233E1D] font-semibold tracking-[4px]">INTEGRIDAD</p>
+                <p class="text-[#233E1D] font-semibold tracking-[4px] uppercase">{ i18n.ABOUT.MISION_SECTION.VALORES.VALOR2.TITLE }</p>
                 <p class="text-2xl text-justify text-[#233E1D] font-light">
-                    Operamos con transparencia y ética en todas nuestras acciones.
+                    { i18n.ABOUT.MISION_SECTION.VALORES.VALOR2.TEXT1 }
                 </p>
             </div>
             <div class="mt-8 space-y-4">
-                <p class="text-[#233E1D] font-semibold tracking-[4px]">ENFOQUE AL CLIENTE</p>
+                <p class="text-[#233E1D] font-semibold tracking-[4px] uppercase">{ i18n.ABOUT.MISION_SECTION.VALORES.VALOR3.TITLE }</p>
                 <p class="text-2xl text-justify text-[#233E1D] font-light">
-                    Adaptamos nuestros servicios a las necesidades específicas de cada cliente.
+                    { i18n.ABOUT.MISION_SECTION.VALORES.VALOR3.TEXT1 }
                 </p>
             </div>
             <div class="mt-8 space-y-4">
-                <p class="text-[#233E1D] font-semibold tracking-[4px]">EFICIENCIA</p>
+                <p class="text-[#233E1D] font-semibold tracking-[4px] uppercase">{ i18n.ABOUT.MISION_SECTION.VALORES.VALOR4.TITLE }</p>
                 <p class="text-2xl text-justify text-[#233E1D] font-light">
-                    Garantizamos la entrega oportuna y la gestión eficaz de recursos.
+                    { i18n.ABOUT.MISION_SECTION.VALORES.VALOR4.TEXT1 }
                 </p>
             </div>
         </div>

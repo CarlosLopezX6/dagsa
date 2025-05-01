@@ -5,12 +5,11 @@ import HomeSlider from "../home/HomeSlider.astro";
 import SolucionesSection from "../home/SolucionesSection.astro";
 import { getI18N } from "../../i18n";
 
-
-const { currentLocale } = Astro;                    //De la configuracion de astro 
+const { currentLocale } = Astro;                   
 const i18n = getI18N( { currentLocale } );
 ---
 
-<Layout title={ i18n.PRUEBA }>
+<Layout title={ i18n.HOME.LAYOUT.TITLE }>
 	<main>
 		<HomeSlider />
 		<SolucionesSection />

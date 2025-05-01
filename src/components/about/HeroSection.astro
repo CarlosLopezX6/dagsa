@@ -1,3 +1,11 @@
+---
+import { getI18N } from "../../i18n";
+
+const { currentLocale } = Astro;                   
+const i18n = getI18N( { currentLocale } );
+---
+
+
 <section class="bg-[#a6a6a6] relative w-full h-screen">
     
     <img 
@@ -16,14 +24,13 @@
                 font-bold uppercase mb-10 text-shadow-lg/30
                 text-4xl md:text-5xl lg:text-6xl  
             ">
-                Conócenos
+                { i18n.ABOUT.HERO_SECTION.TITLE }
             </h2>
             <p class="
                 text-shadow-lg/30
                 text-xl md:text-2xl lg:text-3xl
             ">
-                Somos el socio estratégico para tu industria, ofreciéndote soluciones eficientes y seguras
-                para el transporte marítimo, terrestre y ferroviario.
+                { i18n.ABOUT.HERO_SECTION.TEXT }
             </p>
         </div>
     </div>
