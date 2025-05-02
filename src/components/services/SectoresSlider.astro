@@ -52,7 +52,30 @@ const sectors = [
 
 </div>
 
+<script is:inline src="/scripts/i18nSectoresSlider.js"></script>
+<script is:inline src="/scripts/initSectoresSlider.js"></script>
 <script type="module" is:inline data-astro-rerun>
+
+    const locale = document.querySelector(".slider-wrapper")?.dataset.locale || "es";
+
+    function startSlider() {
+        if (typeof window.initSectoresSlider === "function" && typeof window.i18nSectoresSlider === "function") {
+            window.initSectoresSlider(locale);
+        } else {
+            console.warn("⚠️ Las funciones de slider o i18n aún no están disponibles.");
+        }
+    }
+
+    if (document.readyState === "complete") {
+        startSlider();
+    } else {
+        window.addEventListener("DOMContentLoaded", startSlider);
+    }
+
+    document.addEventListener("astro:after-swap", startSlider);
+</script>
+
+<!-- <script type="module" is:inline data-astro-rerun>
 
     import { getI18N } from "/src/i18n/index.js";
 
@@ -103,4 +126,4 @@ const sectors = [
     document.addEventListener("astro:after-swap", () => {
         initSlider();
     });
-</script>
+</script> -->

@@ -1,3 +1,11 @@
+---
+import { getI18N } from "../../i18n";
+
+const { currentLocale } = Astro;                   
+const i18n = getI18N( { currentLocale } );
+---
+
+
 <section>
 
     <div 
@@ -11,16 +19,16 @@
         
             <div class="text-white">
                 <div class="font-bold">
-                    <p class="text-5xl md:text-6xl lg:text-7xl">
-                        CONTÁCTANOS
+                    <p class="text-5xl md:text-6xl lg:text-7xl uppercase">
+                        { i18n.CONTACT.SECTION1.TEXT1 }
                     </p>
-                    <p class="text-3xl md:text-4xl lg:text-5xl">
-                        Y EMPECEMOS CON TU SOLUCIÓN LOGÍSTICA IDEAL
+                    <p class="text-3xl md:text-4xl lg:text-5xl uppercase">
+                        { i18n.CONTACT.SECTION1.TEXT2 }
                     </p>
                 </div>
                 
-                <p class="text-2xl md:text-3xl lg:text-4xl mt-24">
-                    Ingresa tus datos y en breve te contactaremos.
+                <p class="text-2xl md:text-3xl lg:text-4xl mt-16">
+                    { i18n.CONTACT.SECTION1.TEXT3 }.
                 </p>
             </div>
     
@@ -28,24 +36,24 @@
 
                 <input 
                     type="text" 
-                    placeholder="Nombre*" 
+                    placeholder=`${ i18n.CONTACT.SECTION2.TEXT1 }*` 
                     class="w-full p-3 rounded-xl border bg-white/80 text-2xl font-light" 
                     required 
                 />
                 <input 
                     type="email" 
-                    placeholder="Correo electrónico*" 
+                    placeholder=`${ i18n.CONTACT.SECTION2.TEXT2 }*`
                     class="w-full p-3 rounded-xl border bg-white/80 text-2xl font-light" 
                     required 
                 />
                 <input 
                     type="tel" 
-                    placeholder="Teléfono*" 
+                    placeholder=`${ i18n.CONTACT.SECTION2.TEXT3 }*` 
                     class="w-full p-3 rounded-xl border bg-white/80 text-2xl font-light" 
                     required 
                 />
                 <textarea 
-                    placeholder="Mensaje*" 
+                    placeholder=`${ i18n.CONTACT.SECTION2.TEXT4 }*` 
                     rows="4" 
                     class="w-full p-3 rounded-xl border bg-white/80 text-2xl font-light" 
                     required
@@ -80,18 +88,18 @@
                             </svg>
 
                             <label for="terms" class="ml-4 text-2xl text-white font-light">
-                                *Acepto los términos y las condiciones
+                                *{ i18n.CONTACT.SECTION2.TEXT5 }
                             </label>
 
                         </label>
                     </div>
                     
                     <button class="
-                        px-10 py-1 text-2xl font-bold border-4 rounded-xl cursor-pointer
+                        px-10 py-1 text-2xl font-bold border-4 rounded-xl cursor-pointer uppercase
                         text-[#545454] bg-[#d9d9d9] border-[#aeaeb0] 
                         hover:border-[#d9d9d9] hover:bg-[#d9d9d9] transition-all duration-400 
                     ">
-                        ENVIAR
+                        { i18n.CONTACT.SECTION2.TEXT6 }
                     </button>
                 </div>
                 
@@ -101,7 +109,7 @@
 
     <div class="w-full">
         <img 
-            src="/images/contact/footerContact.png" 
+            src="/images/contact/footerContact.webp" 
             alt="Footer Contact" class="w-full object-cover" 
         />
     </div>

@@ -95,15 +95,75 @@
             "SECTOR_SLIDE5": {
                 "SECTOR": "Metalúrgico"
             }
+        },
+        "TITLE": "Servicios",
+        "IMPORTACION_SECTION": {
+            "SECTION1": {
+                "TEXT1": "Importación",
+                "TEXT2": "y exportación"
+            },
+            "SECTION2": {
+                "TEXT1": "Soluciones personalizadas con",
+                "TEXT2": "especialización en la industria",
+                "TEXT3": "Despachos y Asesoría",
+                "TEXT4": "Gestión y trámites legales",
+                "TEXT5": "Consultoría empresarial",
+                "TEXT6": "Planeación estratégica",
+                "TEXT7": "A través de los puertos de",
+                "TEXT8": "Veracruz, Altamira y Manzanillo,",
+                "TEXT9": "y las terminales intermodal de",
+                "TEXT10": "San Luis Potosí y Monterrey, NL"
+            }
+        },
+        "LOGISTICA_SECTION": {
+            "SECTION1": {
+                "TEXT1": "Logística",
+                "TEXT2": "Bajío, San Luis Potosí, Monterrey y la zona noreste del país, asegurando",
+                "TEXT3": "cobertura y eficiencia en las entregas"
+            },
+            "SECTION2": {
+                "TEXT1": "Atención al",
+                "TEXT2": "sector intermodal ferroviario",
+                "TEXT3": "en los puertos internos Guadalupe",
+                "TEXT4": "Victoria (NL) e Interpuerto (SLP)",
+                "TEXT5": "Atención al",
+                "TEXT6": "sector marítimo",
+                "TEXT7": "a",
+                "TEXT8": "través de los puertos de Veracruz",
+                "TEXT9": "Altamira y Manzanillo"
+            }
+        },
+        "AUTOMOTRIZ_SECTION": {
+            "TEXT1": "Atención al sector automotriz, alimenticio, metalúrgico, carga proyecto y manufacturero"
         }
     },
 
     "CONTACT": {
         "LAYOUT": {
             "TITLE": "Contacto | DAGSA Logistics"
+        },
+        "SECTION1": {
+            "TEXT1": "Contáctanos",
+            "TEXT2": "y empecemos con tu solución logística ideal",
+            "TEXT3": "Ingresa tus datos y en breve te contactaremos"
+        },
+        "SECTION2": {
+            "TEXT1": "Nombre",
+            "TEXT2": "Correo electrónico",
+            "TEXT3": "Teléfono",
+            "TEXT4": "Mensaje",
+            "TEXT5": "Acepto los términos y las condiciones",
+            "TEXT6": "Enviar"
         }
     },
 
+    "FOOTER": {
+        "POLICIES": {
+            "TEXT1": "Aviso de privacidad",
+            "TEXT2": "Política legal",
+            "TEXT3": "Política de cookies"
+        }
+    },
 
 
     "SEO": {

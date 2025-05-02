@@ -95,15 +95,75 @@
             "SECTOR_SLIDE5": {
                 "SECTOR": "Metallurgica"
             }
+        },
+        "TITLE": "Services",
+        "IMPORTACION_SECTION": {
+            "SECTION1": {
+                "TEXT1": "Import",
+                "TEXT2": "and Export"
+            },
+            "SECTION2": {
+                "TEXT1": "Customized solutions with",
+                "TEXT2": "specialization in the industry",
+                "TEXT3": "Customs clearance and advisory services",
+                "TEXT4": "Legal management and procedures",
+                "TEXT5": "Business consulting",
+                "TEXT6": "Strategic planning",
+                "TEXT7": "Accessing the ports of",
+                "TEXT8": "Veracruz, Altamira and Manzanillo,",
+                "TEXT9": "as well as the intermodal terminals in",
+                "TEXT10": "San Luis Potosí and Monterrey, NL"
+            }
+        },
+        "LOGISTICA_SECTION": {
+            "SECTION1": {
+                "TEXT1": "Logistics",
+                "TEXT2": "We serve the Bajío, San Luis Potosí, Monterrey, and the northwest region of the country, ensuring",
+                "TEXT3": "coverage and efficiency in deliveries"
+            },
+            "SECTION2": {
+                "TEXT1": "Support for the",
+                "TEXT2": "intermodal rail sector",
+                "TEXT3": "at the internal ports of Guadalupe",
+                "TEXT4": "Victoria (NL) and Interpuerto (SLP)",
+                "TEXT5": "Support for the",
+                "TEXT6": "maritime sector",
+                "TEXT7": "through",
+                "TEXT8": "the ports of Veracruz",
+                "TEXT9": "Altamira and Manzanillo"
+            }
+        },
+        "AUTOMOTRIZ_SECTION": {
+            "TEXT1": "Support for the automotive, food, metallurgical, project cargo, and manufacturing sectors"
         }
     },
 
     "CONTACT": {
         "LAYOUT": {
             "TITLE": "Contact | DAGSA Logistics"
+        },
+        "SECTION1": {
+            "TEXT1": "Contact us",
+            "TEXT2": "and let’s start with your ideal logistics solution",
+            "TEXT3": "Please enter your contact information, and we will get back to you shortly"
+        },
+        "SECTION2": {
+            "TEXT1": "Name",
+            "TEXT2": "Email",
+            "TEXT3": "Phone",
+            "TEXT4": "Message",
+            "TEXT5": "I accept the terms and conditions",
+            "TEXT6": "Send"
         }
     },
 
+    "FOOTER": {
+        "POLICIES": {
+            "TEXT1": "Privacy notice",
+            "TEXT2": "Legal policy",
+            "TEXT3": "Cookie policy"
+        }
+    },
 
 
     "SEO": {

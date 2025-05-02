@@ -1,3 +1,11 @@
+---
+import { getI18N } from "../../i18n";
+
+const { currentLocale } = Astro;                   
+const i18n = getI18N( { currentLocale } );
+---
+
+
 <section>
 
     <img
@@ -21,7 +29,7 @@
             />
             <div class="absolute inset-0 flex items-center justify-center px-5 sm:px-10 md:px-20">
                 <p class="text-white text-base sm:text-lg md:text-3xl font-light">
-                    Atención al sector automotriz, alimenticio, metalúrgico, carga proyecto y manufacturero.
+                    { i18n.SERVICES.AUTOMOTRIZ_SECTION.TEXT1 }.
                 </p>
             </div>
         </div>

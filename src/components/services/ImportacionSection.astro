@@ -1,3 +1,11 @@
+---
+import { getI18N } from "../../i18n";
+
+const { currentLocale } = Astro;                   
+const i18n = getI18N( { currentLocale } );
+---
+
+
 <section>
 
     <div class="relative">
@@ -6,9 +14,9 @@
             alt="Importacion y exportacion" 
             class="w-full h-auto object-cover" 
         />
-        <div class="absolute bottom-16 right-16 text-white text-5xl font-bold">
-            <h2 class="text-right">IMPORTACIÓN</h2>
-            <h2>Y EXPORTACIÓN</h2>
+        <div class="absolute bottom-16 right-16 text-white text-5xl font-bold uppercase">
+            <h2 class="text-right">{ i18n.SERVICES.IMPORTACION_SECTION.SECTION1.TEXT1 }</h2>
+            <h2>{ i18n.SERVICES.IMPORTACION_SECTION.SECTION1.TEXT2 }</h2>
         </div>
     </div>
 
@@ -18,15 +26,15 @@
         <div class="flex-1 flex justify-center mx-auto text-[#233E1D]">
             <div class="space-y-6">
                 <h3 class="text-3xl font-bold">
-                    Soluciones personalizadas con<br class="hidden sm:block" />
-                    especialización en la industria
+                    { i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT1 }<br class="hidden sm:block" />
+                    { i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT2 }
                 </h3>
         
                 <ul class="list-disc pl-5 text-xl">
-                    <li>Despachos y Asesoría</li>
-                    <li>Gestión y trámites legales</li>
-                    <li>Consultoría empresarial</li>
-                    <li>Planeación estratégica</li>
+                    <li>{ i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT3 }</li>
+                    <li>{ i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT4 }</li>
+                    <li>{ i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT5 }</li>
+                    <li>{ i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT6 }</li>
                 </ul>
             </div>
         </div>
@@ -39,9 +47,9 @@
             />
             <div class="absolute inset-0 flex items-center justify-center px-5 sm:px-10 md:px-20">
                 <p class="text-white text-base sm:text-lg md:text-3xl font-light">
-                    A través de los puertos de 
-                    <span class="font-bold">Veracruz, Altamira y Manzanillo</span> y las terminales intermodal de 
-                    <span class="font-bold">San Luis Potosí y Monterrey NL</span>.
+                    { i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT7 }
+                    <span class="font-bold">{ i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT8 }</span> { i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT9 }
+                    <span class="font-bold">{ i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT10 }</span>.
                 </p>
             </div>
         </div>

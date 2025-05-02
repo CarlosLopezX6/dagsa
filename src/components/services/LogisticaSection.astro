@@ -1,3 +1,11 @@
+---
+import { getI18N } from "../../i18n";
+
+const { currentLocale } = Astro;                   
+const i18n = getI18N( { currentLocale } );
+---
+
+
 <section>
 
     <div class="relative">
@@ -7,13 +15,13 @@
             class="w-full h-auto object-cover"
         />
         <div class="absolute bottom-16 right-16">
-            <h2 class="text-white text-5xl font-bold">LOGÍSTICA</h2>
+            <h2 class="text-white text-5xl font-bold uppercase">{ i18n.SERVICES.LOGISTICA_SECTION.SECTION1.TEXT1 }</h2>
         </div>
     </div>  
     <div class="flex justify-center items-center bg-[#1f3d1e] py-4 sm:py-6 text-white text-justify text-xl font-light">
         <div class="w-xl my-2">
-            Bajío, San Luis Potosí, Monterrey y la zona noreste del país asegurando
-            <span class="font-semibold">cobertura y eficiencia en las entregas</span>.
+            { i18n.SERVICES.LOGISTICA_SECTION.SECTION1.TEXT2 }
+            <span class="font-semibold">{ i18n.SERVICES.LOGISTICA_SECTION.SECTION1.TEXT3 }</span>.
         </div>
     </div>
       
@@ -23,9 +31,9 @@
         <div class="flex-1 flex justify-end">
             <ul>
                 <li class="list-disc">
-                    Atención al <span class="font-semibold">sector intermodal ferroviario</span><br />
-                    en los puertos internos Guadalupe<br />
-                    Victoria (NL) e Interpuerto (SLP).
+                    { i18n.SERVICES.LOGISTICA_SECTION.SECTION2.TEXT1 } <span class="font-semibold">{ i18n.SERVICES.LOGISTICA_SECTION.SECTION2.TEXT2 }</span><br />
+                    { i18n.SERVICES.LOGISTICA_SECTION.SECTION2.TEXT3 }<br />
+                    { i18n.SERVICES.LOGISTICA_SECTION.SECTION2.TEXT4 }.
                 </li>
             </ul>
         </div>
@@ -33,9 +41,9 @@
         <div class="flex-1 flex justify-start">
             <ul>
                 <li class="list-disc">
-                    Atención al <span class="font-semibold">sector marítimo</span> a<br />
-                    través de los puertos de Veracruz,<br />
-                    Altamira y Manzanillo.
+                    { i18n.SERVICES.LOGISTICA_SECTION.SECTION2.TEXT5 } <span class="font-semibold">{ i18n.SERVICES.LOGISTICA_SECTION.SECTION2.TEXT6 }</span> { i18n.SERVICES.LOGISTICA_SECTION.SECTION2.TEXT7 }<br />
+                    { i18n.SERVICES.LOGISTICA_SECTION.SECTION2.TEXT8 },<br />
+                    { i18n.SERVICES.LOGISTICA_SECTION.SECTION2.TEXT9 }.
                 </li>
             </ul>
         </div>
