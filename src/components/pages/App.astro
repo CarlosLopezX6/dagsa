@@ -4,6 +4,7 @@ import ClientesSection from "../home/ClientesSection.astro";
 import HomeSlider from "../home/HomeSlider.astro";
 import SolucionesSection from "../home/SolucionesSection.astro";
 import { getI18N } from "../../i18n";
+import Mapa from "../react/Mapa";
 
 const { currentLocale } = Astro;                   
 const i18n = getI18N( { currentLocale } );
@@ -14,5 +15,6 @@ const i18n = getI18N( { currentLocale } );
 		<HomeSlider />
 		<SolucionesSection />
 		<ClientesSection />
+		<Mapa client:load/>
 	</main>
 </Layout>
