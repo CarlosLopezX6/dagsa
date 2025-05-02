@@ -12,11 +12,17 @@ const {
     ...restOfProps
 } = Astro.props
 
-
 const currentPath = Astro.url.pathname
-const isActive = currentPath === href && checkActive
----
 
+function normalizePath(path: string) {
+  return path === '/' ? '/' : path.replace(/\/$/, '');
+}
+
+const normalizedCurrentPath = normalizePath(currentPath);
+const normalizedHref = normalizePath(href);
+
+const isActive = normalizedCurrentPath === normalizedHref && checkActive;
+---
 
 <a
     href={href}
