@@ -1,0 +1,106 @@
+---
+import { getI18N } from "../../i18n";
+
+
+const { currentLocale } = Astro;                   
+const i18n = getI18N( { currentLocale } );
+
+
+const sectors = [
+    { name: i18n.SERVICES.SECTORS.SECTOR_SLIDE1.SECTOR, image: "/images/services/alimenticio.webp" },
+    { name: i18n.SERVICES.SECTORS.SECTOR_SLIDE2.SECTOR, image: "/images/services/automotriz.webp" },
+    { name: i18n.SERVICES.SECTORS.SECTOR_SLIDE3.SECTOR, image: "/images/services/carga.webp" },
+    { name: i18n.SERVICES.SECTORS.SECTOR_SLIDE4.SECTOR, image: "/images/services/manufacturero.webp" },
+    { name: i18n.SERVICES.SECTORS.SECTOR_SLIDE5.SECTOR, image: "/images/services/metalurgico.webp" },
+];
+---
+
+<div class="slider-wrapper relative w-full h-screen overflow-hidden" data-locale={currentLocale}>
+
+    <div 
+        id="bg-container" 
+        class="absolute inset-0 bg-cover bg-center transition-all duration-700" 
+        style={`background-image: url('${sectors[0].image}')`}>
+    </div>
+
+    <div class="absolute top-0 left-0 w-full h-full bg-black/10 z-10"></div>
+
+    <div class="relative z-10 text-white flex flex-col items-center justify-center h-full text-center px-4">
+        <h2 class="text-2xl md:text-3xl font-bold mb-20 text-shadow-lg/30">
+            { i18n.SERVICES.SECTORS.TITLE }
+        </h2>
+        <ul id="sectors-list" class="list-disc text-left space-y-2 text-4xl font-semibold uppercase text-shadow-lg/30">
+            {
+                sectors.map((s, i) => (
+                    <li 
+                        class={`transition-all duration-500 ml-6 ${i === 0 ? "text-[#dddb0a] text-5xl" : "text-white"}`} 
+                        data-index={i}
+                    >
+                        {s.name}
+                    </li>
+            ))}
+        </ul>
+    </div>
+
+    <div class="absolute cursor-pointer bottom-8 right-0 md:right-8 size-28 md:size-32 lg:size-36 z-10">
+        <img 
+            src="/images/botonWhatsapp.webp" 
+            alt="whatsapp"
+            class="w-full h-full object-contain"
+        />
+    </div>
+
+</div>
+
+<script type="module" is:inline data-astro-rerun>
+
+    import { getI18N } from "/src/i18n/index.js";
+
+    const locale = document.querySelector(".slider-wrapper")?.dataset.locale || "es";
+    const i18n = getI18N({ currentLocale: locale });
+
+    const sectors = [
+        { name: i18n.SERVICES.SECTORS.SECTOR_SLIDE1.SECTOR, image: "/images/services/alimenticio.webp" },
+        { name: i18n.SERVICES.SECTORS.SECTOR_SLIDE2.SECTOR, image: "/images/services/automotriz.webp" },
+        { name: i18n.SERVICES.SECTORS.SECTOR_SLIDE3.SECTOR, image: "/images/services/carga.webp" },
+        { name: i18n.SERVICES.SECTORS.SECTOR_SLIDE4.SECTOR, image: "/images/services/manufacturero.webp" },
+        { name: i18n.SERVICES.SECTORS.SECTOR_SLIDE5.SECTOR, image: "/images/services/metalurgico.webp" },
+    ];
+
+    
+    function initSlider() {
+
+        let current = 0;
+        const bg = document.getElementById("bg-container");
+        const listItems = document.querySelectorAll("#sectors-list li");
+
+        if (!bg || listItems.length === 0) return;
+
+        function changeSlide() {
+            listItems[current].classList.remove("text-[#dddb0a]", "text-5xl");
+            listItems[current].classList.add("text-white", "text-4xl");
+
+            current = (current + 1) % sectors.length;
+
+            bg.style.backgroundImage = `url('${sectors[current].image}')`;
+
+            listItems[current].classList.remove("text-white", "text-4xl");
+            listItems[current].classList.add("text-[#dddb0a]", "text-5xl");
+        }
+
+        // Limpiar intervalo anterior si lo hubiera (opcional por robustez)
+        if (window.sectorsSliderInterval) clearInterval(window.sectorsSliderInterval);
+
+        window.sectorsSliderInterval = setInterval(changeSlide, 4000);
+    }
+
+    if (document.readyState === "complete") {
+        initSlider();
+    } else {
+        window.addEventListener("DOMContentLoaded", initSlider);
+    }
+
+    document.addEventListener("astro:after-swap", () => {
+        initSlider();
+    });
+</script>

@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import TitleSection from "../services/TitleSection.astro";
-import HeroSection from "../about/HeroSection.astro";
+import SectoresSlider from "../services/SectoresSlider.astro";
 import ImportacionSection from "../services/ImportacionSection.astro";
 import LogisticaSection from "../services/LogisticaSection.astro";
 import AutomotrizSection from "../services/AutomotrizSection.astro";
@@ -13,7 +13,7 @@ const i18n = getI18N( { currentLocale } );
 
 <Layout title={ i18n.SERVICES.LAYOUT.TITLE }>
 	<main>
-        <HeroSection />
+        <SectoresSlider />
         <TitleSection />
         <ImportacionSection />
         <LogisticaSection />

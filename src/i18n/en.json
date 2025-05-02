@@ -77,6 +77,24 @@
     "SERVICES": {
         "LAYOUT": {
             "TITLE": "Services | DAGSA Logistics"
+        },
+        "SECTORS": {
+            "TITLE": "We offer logistics solutions for the following sectors:",
+            "SECTOR_SLIDE1": {
+                "SECTOR": "Food"
+            },
+            "SECTOR_SLIDE2": {
+                "SECTOR": "Automotive"
+            },
+            "SECTOR_SLIDE3": {
+                "SECTOR": "Project Cargo"
+            },
+            "SECTOR_SLIDE4": {
+                "SECTOR": "Manufacturing"
+            },
+            "SECTOR_SLIDE5": {
+                "SECTOR": "Metallurgica"
+            }
         }
     },
 
