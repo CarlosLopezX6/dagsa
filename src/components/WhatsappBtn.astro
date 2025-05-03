@@ -1,0 +1,15 @@
+---
+import { getI18N } from "../i18n";
+
+const { currentLocale } = Astro;                   
+const i18n = getI18N( { currentLocale } );
+---
+
+
+<div class="absolute cursor-pointer bottom-8 right-0 md:right-8 size-28 md:size-32 lg:size-36 z-10">
+    <img 
+        src=`/images/${ i18n.WHATSBTN }.webp` 
+        alt="whatsapp"
+        class="w-full h-full object-contain"
+    />
+</div>

@@ -18,6 +18,7 @@ const lang = getLangFromUrl(Astro.url);
 <!doctype html>
 <html lang={ lang }>
 	<head>
+		
 		<!-- HTML Meta Tags -->
 		<meta charset="UTF-8" />
 		<meta name="description" content="DAGSA Logistics" />
@@ -26,18 +27,18 @@ const lang = getLangFromUrl(Astro.url);
 		<!-- Google / Search Engine Tags -->
 		<meta itemprop="name" content={ title } />
 		<meta itemprop="description" content="DAGSA Logistics" />
-		<meta itemprop="image" content="https://res.cloudinary.com/carloslopezx6/image/upload/v1746173378/Clients/footerContact_tvrzpr.webp" />
+		<meta itemprop="image" content="https://res.cloudinary.com/carloslopezx6/image/upload/v1746220682/Clients/dagsa_logo_ojpcyl.webp" />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={ title } />
 		<meta property="og:description" content="DAGSA Logistics" />
-		<meta property="og:image" content="https://res.cloudinary.com/carloslopezx6/image/upload/v1746173378/Clients/footerContact_tvrzpr.webp" />
+		<meta property="og:image" content="https://res.cloudinary.com/carloslopezx6/image/upload/v1746220682/Clients/dagsa_logo_ojpcyl.webp" />
 
 		<!-- Twitter Meta Tags -->
 		<meta name="twitter:title" content={ title } />
 		<meta name="twitter:description" content="DAGSA Logistics" />
-		<meta name="twitter:image" content="https://res.cloudinary.com/carloslopezx6/image/upload/v1746173378/Clients/footerContact_tvrzpr.webp" />
+		<meta name="twitter:image" content="https://res.cloudinary.com/carloslopezx6/image/upload/v1746220682/Clients/dagsa_logo_ojpcyl.webp" />
 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -58,7 +59,13 @@ const lang = getLangFromUrl(Astro.url);
 			href={robotoCondensedNormal}
 			crossorigin="anonymous"
 		/> -->
-		<!-- <ClientRouter /> -->
+
+		<ClientRouter />
+
+		<script is:inline src="/scripts/i18nSectoresSlider.js"></script>
+		<script is:inline src="/scripts/initSectoresSlider.js"></script>
+		<script is:inline src="/scripts/i18nHomeSlider.js"></script>
+		<script is:inline src="/scripts/initHomeSlider.js"></script>
 	</head>
 	<body>
 		<body class="flex flex-col min-h-screen">
@@ -79,5 +86,20 @@ const lang = getLangFromUrl(Astro.url);
 		margin: 0;
 		width: 100%;
 		height: 100%;
+	}
+	#header-nav {
+        animation: blur linear both;
+        animation-timeline: scroll();
+        animation-range: 0 500px;
+    }
+
+	@keyframes blur {
+		to {
+			box-shadow:
+			0px 5px 50px -5px rgba(0, 0, 0, 0.1),
+			0px 0px 0 1px rgba(0, 0, 0, 0.3);
+			background: rgba(0, 0, 0, 0.3);
+			backdrop-filter: blur(10px);
+		}
 	}
 </style>

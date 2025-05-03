@@ -1,5 +1,7 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+import MenuIcon from "./icons/MenuIcon.astro";
+import CloseMenuIcon from "./icons/CloseMenuIcon.astro";
 
 import { getRouteFromUrl, useTranslatedPath, getLangFromUrl, useTranslations } from '../i18n/utils';
 
@@ -10,116 +12,106 @@ const t = useTranslations(lang);
 ---
 
 
-<!-- <nav class="bg-green-900 text-white">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-        <div class="text-xl font-bold">
-            DAGSA LOGISTICS
+<header id="navbar" class="
+    bg-[rgba(35,62,29,0.94)] text-white font-light z-50
+    fixed top-0 w-full 
+    md:px-6 py-4
+">
+    
+    <div class="
+        flex items-center justify-between  gap-4
+        mx-4 md:mx-5 lg:mx-12 md:text-xl lg:text-2xl"
+    >
+
+        <div class="relative z-10 w-36 h-20 min-w-[8rem] min-h-[5rem] flex items-start">
+            <img 
+                src="/images/logo_DAGSA.svg"
+                alt="Logo DAGSA"
+                class="absolute w-full h-auto -top-4"
+            />
         </div>
-        <ul class="flex space-x-6">
-            <li><a href="/" class="hover:text-red-500">Inicio</a></li>
-            <li><a href="/nosotros" class="hover:text-red-500">Nosotros</a></li>
-            <li><a href="/servicios" class="hover:text-red-500">Servicios</a></li>
-            <li><a href="/contacto" class="hover:text-red-500">Contacto</a></li>
-        </ul>
-        <div class="flex items-center space-x-2">
-            <a href="/es" class="text-red-500 font-bold">ES</a>
-            <span>|</span>
-            <a href="/en" class="hover:text-red-500">EN</a>
-        </div>
-    </div>
-</nav> -->
 
-<header id="navbar" class="fixed top-0 w-full px-6 py-4 z-50 bg-[rgba(35,62,29,0.94)] text-white font-light">
-    <div class="mx-14 flex items-center justify-between gap-16 text-xl">
-
-      <div class="relative z-10 w-36 h-20 min-w-[8rem] min-h-[5rem] flex items-start">
-        <img 
-          src="/images/logo_DAGSA.svg"
-          alt="Logo DAGSA"
-          class="absolute w-full h-auto -top-4"
-        />
-      </div>
-
-      <div class="flex justify-center items-center">
-        <nav 
-            id="header-menu"
-            class="
-                fixed w-full h-dvh inset-0 bg-[#151a36]/90 md:text-xl lg:text-xl 
-                flex flex-col items-center justify-center gap-20 
-                -translate-y-full transition-transform duration-300 target:translate-y-0 
-                md:static md:h-[initial] md:bg-[initial] md:flex-row md:translate-y-[initial]"
-            >
+        <div class="hidden md:flex items-center justify-center flex-grow gap-2 md:gap-9 lg:gap-20">
             <HeaderLink href={translatePath('/')} class="uppercase">
-              {t('nav.inicio')}
+                {t('nav.inicio')}
             </HeaderLink>
             <HeaderLink href={translatePath('/nosotros')} class="uppercase">
-              {t('nav.nosotros')}
+                {t('nav.nosotros')}
             </HeaderLink>
             <HeaderLink href={translatePath('/servicios')} class="uppercase">
-              {t('nav.servicios')}
+                {t('nav.servicios')}
             </HeaderLink>
             <HeaderLink href={translatePath('/contacto')} class="uppercase">
-              {t('nav.contacto')}
+                {t('nav.contacto')}
             </HeaderLink>
-        </nav>
-      </div>
+        </div>
 
-      <div class="flex items-center justify-center space-x-2">
-        <HeaderLink 
-          href={translatePath(`/${route ? route : ''}`, "en")} 
-          class="hover:text-red-500"
-                                                 
-        >
-          EN
-        </HeaderLink>
-        <span>|</span>
-        <HeaderLink 
-          href={translatePath(`/${route ? route : ''}`, "es")} 
-          class="hover:text-red-500"
+        <div class="hidden md:flex items-center gap-2">
+            <HeaderLink href={translatePath(`/${route || ''}`, "en")} class="hover:text-red-500">
+                EN
+            </HeaderLink>
+            <span>|</span>
+            <HeaderLink href={translatePath(`/${route || ''}`, "es")} class="hover:text-red-500">
+                ES
+            </HeaderLink>
+        </div>
+    </div>
 
-        >
-          ES
-        </HeaderLink>
-      </div>
-      <!-- <HeaderLink
-        checkActive={false}
-        href={translatePath('/')}
-        class="relative z-10"
-        aria-label={i18n.HEADER.LOGO}
-      >
-        <Logo
-          class="absolute w-10 m-auto blur-sm opacity-0 transition-opacity duration-300 hover:opacity-100"
-        />
-        <Logo class="w-10" />
-      </HeaderLink>
-      <nav
+
+    <nav
         id="header-menu"
-        class="fixed w-full h-dvh inset-0 bg-[#151a36]/90 md:text-xl lg:text-xl flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:flex-row md:translate-y-[initial]"
-      >
-        <HeaderLink class="text__glowing" href={translatePath('/vota/')}>
-          {t('nav.vota')}
+        class="
+            fixed w-full h-dvh inset-0 bg-[rgba(35,62,29,0.99)] text-2xl
+            flex flex-col items-center justify-center gap-10
+            -translate-y-full transition-transform duration-300 target:translate-y-0
+            md:hidden
+        "
+    >
+        <HeaderLink href={translatePath('/')} class="uppercase">
+            {t('nav.inicio')}
         </HeaderLink>
-        <HeaderLink class="text__glowing" href={translatePath('/info/')}>
-          {t('nav.info')}
+        <HeaderLink href={translatePath('/nosotros')} class="uppercase">
+            {t('nav.nosotros')}
         </HeaderLink>
-        <HeaderLink class="text__glowing" href={translatePath('/archivo/')}>
-          {t('nav.archivo')}
+        <HeaderLink href={translatePath('/servicios')} class="uppercase">
+            {t('nav.servicios')}
         </HeaderLink>
-        <LanguageSelector />
-        <Button
-          className="md:py-2 md:ml-auto md:text-base lg:text-base"
-          url="https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view"
-        >
-          {i18n.HEADER_BUTTON}
-        </Button> -->
-        <a href="#header-nav" class="md:hidden absolute top-6 right-6">
-          <!-- <CloseIcon /> -->
-           Cerrar
+        <HeaderLink href={translatePath('/contacto')} class="uppercase">
+            {t('nav.contacto')}
+        </HeaderLink>
+
+        <div class="flex items-center gap-2 mt-14">
+            <HeaderLink href={translatePath(`/${route || ''}`, "en")} class="hover:text-red-500">
+                EN
+            </HeaderLink>
+            <span>|</span>
+            <HeaderLink href={translatePath(`/${route || ''}`, "es")} class="hover:text-red-500">
+                ES
+            </HeaderLink>
+        </div>
+    </nav>
+
+    <div class="menu-toggle md:hidden absolute top-8 right-4 z-50">
+        <a href="#header-menu" class="menu-open block">
+            <MenuIcon class="size-12" />
         </a>
-      </nav>
-        <a href="#header-menu" class="md:hidden">
-            <!-- <MenuIcon /> -->
-            Menu
+        <a href="#navbar" class="menu-close block">
+            <CloseMenuIcon class="size-12" />
         </a>
     </div>
+    
 </header>
+
+<style>
+    #header-menu:target ~ .menu-toggle .menu-open {
+        display: none;
+    }
+
+    #header-menu:target ~ .menu-toggle .menu-close {
+        display: block;
+    }
+
+    .menu-close {
+        display: none;
+    }
+</style>

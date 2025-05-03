@@ -10,24 +10,24 @@ const i18n = getI18N( { currentLocale } );
 
     <div 
         class="relative w-full bg-cover bg-center bg-no-repeat"
-        style="background-image: url('/images/contact/bgContact.png')"
+        style="background-image: url('/images/contact/bgContact.webp')"
     >
         
         <div class="bg-black/30 w-full h-full absolute inset-0"></div>
     
-        <div class="relative z-10 px-4 md:px-16 mx-auto py-20 pt-56 grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8">
+        <div class="relative z-10 px-8 lg:px-16 mx-auto py-20 pt-56 grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8">
         
             <div class="text-white">
                 <div class="font-bold">
-                    <p class="text-5xl md:text-6xl lg:text-7xl uppercase">
+                    <p class="text-5xl md:text-5xl lg:text-7xl uppercase">
                         { i18n.CONTACT.SECTION1.TEXT1 }
                     </p>
-                    <p class="text-3xl md:text-4xl lg:text-5xl uppercase">
+                    <p class="text-3xl md:text-3xl lg:text-5xl uppercase">
                         { i18n.CONTACT.SECTION1.TEXT2 }
                     </p>
                 </div>
                 
-                <p class="text-2xl md:text-3xl lg:text-4xl mt-16">
+                <p class="text-2xl md:text-2xl lg:text-4xl mt-16">
                     { i18n.CONTACT.SECTION1.TEXT3 }.
                 </p>
             </div>
@@ -37,29 +37,29 @@ const i18n = getI18N( { currentLocale } );
                 <input 
                     type="text" 
                     placeholder=`${ i18n.CONTACT.SECTION2.TEXT1 }*` 
-                    class="w-full p-3 rounded-xl border bg-white/80 text-2xl font-light" 
+                    class="w-full p-3 rounded-xl border bg-white/80 text-xl lg:text-2xl font-light" 
                     required 
                 />
                 <input 
                     type="email" 
                     placeholder=`${ i18n.CONTACT.SECTION2.TEXT2 }*`
-                    class="w-full p-3 rounded-xl border bg-white/80 text-2xl font-light" 
+                    class="w-full p-3 rounded-xl border bg-white/80 text-xl lg:text-2xl font-light" 
                     required 
                 />
                 <input 
                     type="tel" 
                     placeholder=`${ i18n.CONTACT.SECTION2.TEXT3 }*` 
-                    class="w-full p-3 rounded-xl border bg-white/80 text-2xl font-light" 
+                    class="w-full p-3 rounded-xl border bg-white/80 text-xl lg:text-2xl font-light" 
                     required 
                 />
                 <textarea 
                     placeholder=`${ i18n.CONTACT.SECTION2.TEXT4 }*` 
                     rows="4" 
-                    class="w-full p-3 rounded-xl border bg-white/80 text-2xl font-light" 
+                    class="w-full p-3 rounded-xl border bg-white/80 text-xl lg:text-2xl font-light" 
                     required
                 />
                 
-                <div class="flex flex-col md:flex-row justify-between items-center gap-4 px-1">
+                <div class="flex flex-col xl:flex-row justify-between items-center gap-4 px-1">
                     <div class="flex items-center gap-2">
                         <label class="inline-flex items-center cursor-pointer relative">
                             <input 
@@ -87,7 +87,7 @@ const i18n = getI18N( { currentLocale } );
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
 
-                            <label for="terms" class="ml-4 text-2xl text-white font-light">
+                            <label for="terms" class="ml-4 text-xl lg:text-2xl text-white font-light">
                                 *{ i18n.CONTACT.SECTION2.TEXT5 }
                             </label>
 
@@ -95,7 +95,7 @@ const i18n = getI18N( { currentLocale } );
                     </div>
                     
                     <button class="
-                        px-10 py-1 text-2xl font-bold border-4 rounded-xl cursor-pointer uppercase
+                        px-10 py-1 text-xl lg:text-2xl font-bold border-4 rounded-xl cursor-pointer uppercase
                         text-[#545454] bg-[#d9d9d9] border-[#aeaeb0] 
                         hover:border-[#d9d9d9] hover:bg-[#d9d9d9] transition-all duration-400 
                     ">
