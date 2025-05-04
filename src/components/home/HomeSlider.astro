@@ -27,9 +27,9 @@ const slides = [
 ---
 
 
-<div class="slider-wrapper relative flex items-center justify-center text-white px-8 text-center" data-locale={currentLocale}>
+<div class="slider-wrapper relative flex items-center justify-center text-white px-4 text-center" data-locale={currentLocale}>
 
-    <!-- <video 
+    <video 
         autoplay 
         muted 
         loop 
@@ -38,7 +38,7 @@ const slides = [
     >
         <source src="/homeVideo.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
-    </video> -->
+    </video>
 
     <div class="absolute top-0 left-0 w-full h-full bg-black/30 z-10"></div>
         
@@ -64,10 +64,10 @@ const slides = [
     </div>
     
     <button id="prev-slide" class="absolute left-0 md:left-0 lg:left-40 xl:left-80 top-1/2 -translate-y-1/2 text-[#DF0A14] cursor-pointer z-10">
-        <ChevronLeftIcon class="size-12 md:size-16" />
+        <ChevronLeftIcon class="size-8 md:size-16" />
     </button>
     <button id="next-slide" class="absolute right-0 md:right-0 lg:right-40 xl:right-80 top-1/2 -translate-y-1/2 text-[#DF0A14] cursor-pointer z-10">
-        <ChevronRightIcon class="size-12 md:size-16" />
+        <ChevronRightIcon class="size-8 md:size-16" />
     </button>
 
     <WhatsappBtn />

@@ -17,15 +17,15 @@ window.initSectoresSlider = function (locale = 'es') {
     ];
 
     function changeSlide() {
-        listItems[current].classList.remove("text-[#dddb0a]", "text-5xl");
-        listItems[current].classList.add("text-white", "text-4xl");
+        listItems[current].classList.remove("text-[#dddb0a]", "text-4xl", "md:text-5xl");
+        listItems[current].classList.add("text-white", "text-3xl", "md:text-4xl");
 
         current = (current + 1) % sectors.length;
 
         bg.style.backgroundImage = `url('${sectors[current].image}')`;
 
-        listItems[current].classList.remove("text-white", "text-4xl");
-        listItems[current].classList.add("text-[#dddb0a]", "text-5xl");
+        listItems[current].classList.remove("text-white", "text-3xl", "md:text-4xl");
+        listItems[current].classList.add("text-[#dddb0a]", "text-4xl", "md:text-5xl");
     }
 
     // Limpiar intervalo anterior si lo hubiera (opcional por robustez)
