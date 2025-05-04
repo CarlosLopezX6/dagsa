@@ -16,19 +16,20 @@ const translatePath = useTranslatedPath(lang);
 const t = useTranslations(lang);
 ---
 
+
 <footer class="relative bg-[#233E1D] text-white">
     <img 
         src="/images/anclaFooter.webp" 
-        alt="ancla footer"
-        class="absolute right-0 bottom-0 h-full max-w-none pointer-events-none select-none"
+        alt="Ancla Footer"
+        class="absolute right-0 bottom-0 h-full max-w-none pointer-events-none select-none opacity-30"
     />
 
-    <div class="py-8 px-10 md:px-32 flex flex-col space-y-8 md:grid md:grid-cols-5 md:gap-14">
+    <div class="pt-14 pb-16 px-12 md:px-24 lg:px-28 xl:px-32 flex flex-col xl:flex-row justify-between gap-10">
 
-        <div class="md:col-span-1">
+        <div class="">
             <img 
                 src="/images/logo_DAGSA.svg"
-                class="-mt-8 mb-6 w-36 mx-auto" 
+                class="-mt-14 mb-6 w-48 mx-auto" 
                 alt="Logo"
             />
             <div class="text-xl font-bold h-12 bg-[#DF0A14] flex justify-center items-center px-6 space-x-4">
@@ -47,7 +48,7 @@ const t = useTranslations(lang);
             </div>
         </div>
 
-        <div class="space-y-4 text-xl md:col-span-2 font-light items-center">
+        <div class="space-y-4 text-lg md:text-2xl xl:text-2xl mx-auto xl:mx-0 font-light items-center">
             <div class="flex">
                 <MapPinIcon class="size-8 text-[#DF0A14]"/>
                 <div class="ml-1">
@@ -65,7 +66,7 @@ const t = useTranslations(lang);
             </div>
         </div>
             
-        <div class="text-2xl text-center md:text-left font-semibold md:col-span-1 uppercase">
+        <div class="text-3xl text-center xl:text-left font-semibold uppercase">
             <ul class="space-y-1">
                 <li><a href={translatePath('/')} class="hover:text-[#DF0A14]">{t('nav.inicio')}</a></li>
                 <li><a href={translatePath('/servicios/')} class="hover:text-[#DF0A14]">{t('nav.servicios')}</a></li>
@@ -74,7 +75,7 @@ const t = useTranslations(lang);
             </ul>
         </div>
     
-        <div class="text-2xl text-center md:text-left underline underline-offset-1 text-[#41583C] md:col-span-1">
+        <div class="text-3xl text-center xl:text-left underline underline-offset-1 text-[#657861]">
             <ul class="space-y-1">
                 <li><a href="/">{ i18n.FOOTER.POLICIES.TEXT1 }</a></li>
                 <li><a href="/">{ i18n.FOOTER.POLICIES.TEXT2 }</a></li>
