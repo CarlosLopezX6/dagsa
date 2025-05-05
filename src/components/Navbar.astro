@@ -22,14 +22,18 @@ const t = useTranslations(lang);
         flex items-center justify-between  gap-4
         mx-4 md:mx-5 lg:mx-12 md:text-xl lg:text-2xl"
     >
-
-        <div class="relative z-10 w-36 h-20 min-w-[8rem] min-h-[5rem] flex items-start">
+        <HeaderLink 
+            checkActive={false}
+            href={translatePath('/')} 
+            aria-label="Logo DAGSA"
+            class="relative z-10 w-36 h-20 min-w-[8rem] min-h-[5rem] flex items-start"
+        >
             <img 
                 src="/images/logo_DAGSA.svg"
                 alt="Logo DAGSA"
                 class="absolute w-full h-auto -top-4"
             />
-        </div>
+        </HeaderLink>
 
         <div class="hidden md:flex items-center justify-center flex-grow gap-2 md:gap-9 lg:gap-20">
             <HeaderLink href={translatePath('/')} class="uppercase">
