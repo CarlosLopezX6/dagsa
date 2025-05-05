@@ -14,7 +14,12 @@ const i18n = getI18N( { currentLocale } );
             alt="Importacion y exportacion" 
             class="w-full h-auto object-cover" 
         />
-        <div class="absolute bottom-16 right-16 text-white text-5xl font-bold uppercase">
+        <div class="
+            absolute text-white font-bold uppercase
+            bottom-8 right-8
+            md:bottom-16 md:right-16  
+            text-2xl md:text-4xl xl:text-5xl"
+        >
             <h2 class="text-right">{ i18n.SERVICES.IMPORTACION_SECTION.SECTION1.TEXT1 }</h2>
             <h2>{ i18n.SERVICES.IMPORTACION_SECTION.SECTION1.TEXT2 }</h2>
         </div>
@@ -23,14 +28,14 @@ const i18n = getI18N( { currentLocale } );
 
     <div class="flex flex-col lg:flex-row items-start gap-6 lg:gap-0 py-6">
     
-        <div class="flex-1 flex justify-center mx-auto text-[#233E1D]">
-            <div class="space-y-6">
-                <h3 class="text-3xl font-bold">
+        <div class="flex-1 flex justify-center mx-auto px-24 md:px-0 text-[#233E1D]">
+            <div class="space-y-6 ">
+                <h3 class="text-base md:text-3xl lg:text-2xl xl:text-3xl font-bold">
                     { i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT1 }<br class="hidden sm:block" />
                     { i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT2 }
                 </h3>
         
-                <ul class="list-disc pl-5 text-xl">
+                <ul class="list-disc pl-5 text-base md:text-xl lg:text-lg xl:text-xl">
                     <li>{ i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT3 }</li>
                     <li>{ i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT4 }</li>
                     <li>{ i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT5 }</li>
@@ -45,8 +50,8 @@ const i18n = getI18N( { currentLocale } );
                 alt="Forma decorativa" 
                 class="w-full h-full object-contain"
             />
-            <div class="absolute inset-0 flex items-center justify-center px-5 sm:px-10 md:px-20">
-                <p class="text-white text-base sm:text-lg md:text-3xl font-light">
+            <div class="absolute inset-0 flex items-center justify-center px-10 md:px-20">
+                <p class="text-white text-base md:text-3xl lg:text-2xl xl:text-3xl font-light">
                     { i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT7 }
                     <span class="font-bold">{ i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT8 }</span> { i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT9 }
                     <span class="font-bold">{ i18n.SERVICES.IMPORTACION_SECTION.SECTION2.TEXT10 }</span>.
