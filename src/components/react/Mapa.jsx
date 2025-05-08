@@ -1,15 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const markers = [
-    { id: 'altamira', top: '46%', left: '54%', text: "Altamira", textStyle: "text-base ml-9", img: '/images/mapa/Altamira.webp',  },
     { id: 'monterrey', top: '30%', left: '47%', text: "Monterrey", img: '/images/mapa/Monterrey.webp' },
+    { id: 'altamira', top: '46%', left: '54%', text: "Altamira", img: '/images/mapa/Altamira.webp'  },
     { id: 'sanLuis', top: '54%', left: '46%', text: "San Luis Potosí", img: '/images/mapa/Monterrey.webp' },
     { id: 'veracruz', top: '64%', left: '58%', text: "Veracruz", img: '/images/mapa/Altamira.webp' },
     { id: 'manzanillo', top: '65%', left: '36%', text: "Manzanillo", img: '/images/mapa/Altamira.webp' },
 ];
 
-export default function MapaInteractivo() {
+export default function MapaInteractivo({ lang }) {
     const [activeMarker, setActiveMarker] = useState(null);
+
 
     const toggleMarker = (id) => {
         setActiveMarker((prev) => (prev === id ? null : id));
@@ -19,10 +20,11 @@ export default function MapaInteractivo() {
         setActiveMarker(null);
     };
 
+
     return (
         <section className="w-full bg-[#939392]" onClick={closeMarker}>
             <div className="relative w-full max-w-4xl mx-auto">
-                <img src="/images/mapa/mapa.webp" alt="Mapa" className="w-full h-auto" />
+                <img src={ lang === "es" ? "/images/mapa/mapa.webp" : "/images/mapa/mapaENG.webp"} alt="Mapa" className="w-full h-auto" />
 
                 {markers.map((marker) => (
                     <div
