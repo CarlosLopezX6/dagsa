@@ -2,7 +2,6 @@
 import ChevronLeftIcon from "../icons/ChevronLeftIcon.astro";
 import ChevronRightIcon from "../icons/ChevronRightIcon.astro";
 import { getI18N } from "../../i18n";
-import WhatsappBtn from "../WhatsappBtn.astro";
 
 
 const { currentLocale } = Astro;                   
@@ -30,17 +29,18 @@ const slides = [
 <div class="slider-wrapper relative flex items-center justify-center text-white px-4 text-center" data-locale={currentLocale}>
 
     <video 
+        preload="auto"
         autoplay 
         muted 
         loop 
         playsinline 
-        class="absolute top-0 left-0 w-full h-full object-cover z-0"
+        class="absolute top-0 left-0 w-full h-full object-cover z-10"
     >
         <source src="/homeVideo.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
     </video>
 
-    <div class="absolute top-0 left-0 w-full h-full bg-black/30 z-10"></div>
+    <div class="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
         
     <div class="max-w-2xl uppercase relative z-10">
         <p
@@ -70,12 +70,9 @@ const slides = [
         <ChevronRightIcon class="size-8 md:size-16" />
     </button>
 
-    <WhatsappBtn />
 </div>
 
 
-<!-- <script is:inline src="/scripts/i18nHomeSlider.js"></script>
-<script is:inline src="/scripts/initHomeSlider.js"></script> -->
 <script type="module" is:inline data-astro-rerun>
     const locale = document.querySelector(".slider-wrapper")?.dataset.locale || "es";
 

@@ -1,29 +1,90 @@
-const Mapa = () => {
-  const markers = [
-    { id: "veracruz", top: "66%", left: "63%" },
-    { id: "monterrey", top: "35%", left: "45%" },
-    { id: "altamira", top: "41%", left: "51%" },
-    { id: "manzanillo", top: "68%", left: "40%" },
-    { id: "san-luis-potosi", top: "57%", left: "54%" },
-  ];
+import { useState } from 'react';
 
-  return (
-    <div className="relative w-full h-screen bg-[#939393]">
-      <div className="absolute inset-0 bg-[url('/images/mapa/mapa.png')] bg-contain bg-center bg-no-repeat" />
+const markers = [
+    { id: 'altamira', top: '46%', left: '54%', text: "Altamira", textStyle: "text-base ml-9", img: '/images/mapa/Altamira.webp',  },
+    { id: 'monterrey', top: '30%', left: '47%', text: "Monterrey", img: '/images/mapa/Monterrey.webp' },
+    { id: 'sanLuis', top: '54%', left: '46%', text: "San Luis Potosí", img: '/images/mapa/Monterrey.webp' },
+    { id: 'veracruz', top: '64%', left: '58%', text: "Veracruz", img: '/images/mapa/Altamira.webp' },
+    { id: 'manzanillo', top: '65%', left: '36%', text: "Manzanillo", img: '/images/mapa/Altamira.webp' },
+];
 
-      {markers.map(({ id, top, left }) => (
-        <img
-          key={id}
-          src="/images/mapa/ubicacion.png"
-          alt={id}
-          className="hidden md:block absolute w-5 lg:w-30"
-          style={{ top, left, transform: "translate(-50%, -50%)" }}
-        />
-      ))}
+export default function MapaInteractivo() {
+    const [activeMarker, setActiveMarker] = useState(null);
 
-      <div className="relative z-10 flex items-center justify-center h-full"></div>
-    </div>
-  );
-};
+    const toggleMarker = (id) => {
+        setActiveMarker((prev) => (prev === id ? null : id));
+    };
 
-export default Mapa;
+    const closeMarker = () => {
+        setActiveMarker(null);
+    };
+
+    return (
+        <section className="w-full bg-[#939392]" onClick={closeMarker}>
+            <div className="relative w-full max-w-4xl mx-auto">
+                <img src="/images/mapa/mapa.webp" alt="Mapa" className="w-full h-auto" />
+
+                {markers.map((marker) => (
+                    <div
+                        key={marker.id}
+                        onClick={(e) => {
+                            e.stopPropagation(); 
+                            toggleMarker(marker.id);
+                        }}
+                        className="absolute cursor-pointer"
+                        style={{ top: marker.top, left: marker.left }}
+                    >
+                       
+
+                        <span className="relative flex size-7">
+                            <span className="absolute inline-flex h-full w-full rounded-full bg-white opacity-75 animate-ping"></span>
+                            <span className="relative inline-flex size-7 rounded-full bg-white"></span>
+                        </span>
+
+                        
+                        <div className='absolute w-full'>
+                            <div
+                                className={`relative -top-25 left-4 transform -translate-x-1/2 transition-all duration-300 
+                                    ${
+                                        activeMarker === marker.id
+                                            ? 'opacity-100 translate-y-0'
+                                            : 'opacity-0 translate-y-4 pointer-events-none'
+                                    }
+                                    ${
+                                        marker.id === "monterrey" 
+                                            ? 'size-28 -top-26' :
+                                        marker.id === "sanLuis"
+                                            ? 'size-28 -top-26'
+                                            : 'size-32 -top-25'
+                                    }
+                                `}
+                            >
+                                <div>
+                                    <img
+                                        src={marker.img}
+                                        alt={marker.id}
+                                        className="w-full h-full object-contain"
+                                    />
+                                    <span 
+                                        className={`text-white text-center text-shadow-lg/80
+                                            ${ 
+                                                marker.id === "altamira" ? "text-base ml-9" : 
+                                                marker.id === "monterrey" ? "text-base ml-6" : 
+                                                marker.id === "sanLuis" ? "text-sm ml-4" : 
+                                                marker.id === "veracruz" ? "text-base ml-9" : 
+                                                marker.id === "manzanillo" ? "text-base ml-8" : ""
+                                            }`}
+                                        >
+                                            {marker.text}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                ))}
+
+            </div>
+        </section>
+    );
+}

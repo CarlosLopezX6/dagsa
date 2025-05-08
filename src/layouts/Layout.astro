@@ -6,6 +6,7 @@ import '@fontsource-variable/roboto-condensed';
 import '../styles/global.css'
 import { ClientRouter } from 'astro:transitions';
 import { getLangFromUrl } from '../i18n/utils';
+import WhatsappBtn from '../components/WhatsappBtn.astro';
 
 interface Props {
 	title: string;
@@ -44,6 +45,14 @@ const lang = getLangFromUrl(Astro.url);
 		<meta name="generator" content={Astro.generator} />
 
 		<title>{ title }</title>
+
+
+		<link rel="preload" href="/images/services/alimenticio.webp" as="image" />
+		<link rel="preload" href="/images/services/automotriz.webp" as="image" />
+		<link rel="preload" href="/images/services/carga.webp" as="image" />
+		<link rel="preload" href="/images/services/manufacturero.webp" as="image" />
+		<link rel="preload" href="/images/services/metalurgico.webp" as="image" />
+
 		
 		<!-- <link
 			rel="preload"
@@ -66,15 +75,25 @@ const lang = getLangFromUrl(Astro.url);
 		<script is:inline src="/scripts/initSectoresSlider.js"></script>
 		<script is:inline src="/scripts/i18nHomeSlider.js"></script>
 		<script is:inline src="/scripts/initHomeSlider.js"></script>
+
+		<!-- AOS -->
+		<script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	</head>
-	<body>
-		<body class="flex flex-col min-h-screen">
-			<Navbar />
-				<main class="flex-grow">
-					<slot />
-				</main>
-			<Footer />
-		</body>
+	<body class="flex flex-col min-h-screen">
+		
+		<Navbar />
+			<main class="flex-grow">
+				<slot />
+				<WhatsappBtn />
+			</main>
+		<Footer />
+		
+		<script is:inline>
+			document.addEventListener("astro:page-load", () => {
+				AOS.init();
+			});
+		</script>
 	</body>
 </html>
 
@@ -101,5 +120,9 @@ const lang = getLangFromUrl(Astro.url);
 			background: rgba(0, 0, 0, 0.3);
 			backdrop-filter: blur(10px);
 		}
+	}
+
+	html, body {
+		overflow-x: hidden;
 	}
 </style>

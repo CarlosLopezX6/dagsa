@@ -15,13 +15,44 @@ const i18n = getI18N( { currentLocale } );
     />
 
     <div class="flex items-center py-6 gap-4 md:gap-8 lg:gap-32 xl:gap-32">
+
+        <div class="w-auto flex-initial">
+            <img
+                data-aos="fade-right" data-aos-duration="1500"
+                src="/images/services/redArrow2.png"
+                alt="redArrow2"
+                class="h-full w-32 md:w-96 lg:w-96 xl:w-xl"
+            />
+        </div>
+    
+        <div data-aos="fade-left" data-aos-duration="1500" class="relative flex-1 w-full flex justify-end">
+            <div class="relative flex justify-end md:w-lg lg:w-full">
+
+                <img 
+                    src="/images/services/formacurva2.png" 
+                    alt="formacurva2" 
+                    class="w-full h-auto object-contain"
+                />
+                
+                <div class="absolute inset-0 flex items-center justify-start w-full px-8 md:px-10 lg:px-20 bg-opacity-0">
+                    <p class="text-white text-xs md:text-xl lg:text-2xl xl:text-3xl font-light text-left w-full">
+                        { i18n.SERVICES.AUTOMOTRIZ_SECTION.TEXT1 }.
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- <div class="flex items-center py-6 gap-4 md:gap-8 lg:gap-32 xl:gap-32">
         <img
+            data-aos="fade-right" data-aos-duration="1500"
             src="/images/services/redArrow2.png"
             alt="redArrow2"
-            class="h-full w-10 md:w-40 lg:w-96 xl:w-xl"
+            class="h-full w-full md:w-40 lg:w-96 xl:w-xl"
         />
 
-        <div class="relative flex-1 w-full">
+        <div data-aos="fade-left" data-aos-duration="1500" class="relative flex-1 w-full">
             <img 
                 src="/images/services/formacurva2.png" 
                 alt="formacurva2" 
@@ -33,6 +64,6 @@ const i18n = getI18N( { currentLocale } );
                 </p>
             </div>
         </div>
-    </div>
+    </div> -->
 
 </section>

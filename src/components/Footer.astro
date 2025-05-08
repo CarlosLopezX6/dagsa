@@ -26,7 +26,11 @@ const t = useTranslations(lang);
         class="absolute right-0 bottom-0 h-full max-w-none pointer-events-none select-none opacity-30"
     />
 
-    <div class="pt-14 pb-16 px-12 md:px-24 lg:px-28 xl:px-32 flex flex-col xl:flex-row justify-between gap-10">
+    <!-- <div class="pt-14 pb-16 px-12 md:px-24 lg:px-28 xl:px-32 flex flex-col xl:flex-row justify-between gap-10"> -->
+     <!-- class="-mt-14 mb-6 w-48 mx-auto"  -->
+    <div class=" flex flex-col xl:flex-row justify-between py-10 gap-10
+        px-12 md:px-24 lg:px-28 xl:px-36 
+    ">
 
         <div>
             
@@ -37,7 +41,7 @@ const t = useTranslations(lang);
             >
                 <img 
                     src="/images/logo_DAGSA.svg"
-                    class="-mt-14 mb-6 w-48 mx-auto" 
+                    class="-mt-10 mb-3 w-48 xl:40 mx-auto" 
                     alt="Logo DAGSA"
                 />
             </HeaderLink>
@@ -58,25 +62,27 @@ const t = useTranslations(lang);
             </div>
         </div>
 
-        <div class="space-y-4 text-lg md:text-2xl xl:text-2xl mx-auto xl:mx-0 font-light items-center">
+        <!-- <div class="space-y-4 text-lg md:text-2xl xl:text-2xl mx-auto xl:mx-0 font-light items-center"> -->
+            <div class="space-y-4 text-lg md:text-xl lg:text-xl xl:text-base mx-auto xl:mx-0 font-light items-center">
             <div class="flex">
-                <MapPinIcon class="size-8 text-[#DF0A14]"/>
+                <MapPinIcon class="size-5 text-[#DF0A14]"/>
                 <div class="ml-1">
                     <p>Isabel la Católica #1450 Altos. Col. Electricistas</p>
                     <p>C.P. 91916, Veracruz, Ver</p>
                 </div>
             </div>
             <div class="flex items-center">
-                <WhatsAppIcon size="8" class="text-[#DF0A14]"/>
+                <WhatsAppIcon class="size-5 text-[#DF0A14]"/>
                 <p class="ml-2">(229) 929 14 85</p>
             </div>
             <div class="flex items-center">
-                <MailIcon size="8" class="text-[#DF0A14] mr-1"/>
+                <MailIcon class="size-5 text-[#DF0A14] mr-1"/>
                 <p class="ml-1">comercial@despachoyasesoria.com</p>
             </div>
         </div>
             
-        <div class="text-3xl text-center xl:text-left font-semibold uppercase">
+        <!-- <div class="text-3xl text-center xl:text-left font-semibold uppercase"> -->
+        <div class="text-xl text-center xl:text-left font-semibold uppercase">
             <ul class="space-y-1">
                 <li><a href={translatePath('/')} class="hover:text-[#DF0A14]">{t('nav.inicio')}</a></li>
                 <li><a href={translatePath('/servicios/')} class="hover:text-[#DF0A14]">{t('nav.servicios')}</a></li>
@@ -85,7 +91,7 @@ const t = useTranslations(lang);
             </ul>
         </div>
     
-        <div class="text-3xl text-center xl:text-left underline underline-offset-1 text-[#657861]">
+        <div class="text-xl text-center xl:text-left underline underline-offset-1 text-[#657861]">
             <ul class="space-y-1">
                 <li><a href="/">{ i18n.FOOTER.POLICIES.TEXT1 }</a></li>
                 <li><a href="/">{ i18n.FOOTER.POLICIES.TEXT2 }</a></li>

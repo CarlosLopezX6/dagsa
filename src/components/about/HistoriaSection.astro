@@ -9,7 +9,8 @@ const i18n = getI18N( { currentLocale } );
 <section class="w-full bg-[#cecece] py-20 px-8 lg:px-0">
     <div class="grid md:grid-cols-1 lg:grid-cols-3 mx-auto gap-10">
       
-        <div class="lg:col-span-2">
+        <div data-aos="fade-right" data-aos-duration="1500" data-aos-offset="200" class="lg:col-span-2">
+
             <h2 class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase mb-12 text-white text-shadow-lg/40 text-center lg:text-right">
                 { i18n.ABOUT.HISTORIA_SECTION.TITLE }
             </h2>
@@ -29,7 +30,7 @@ const i18n = getI18N( { currentLocale } );
             </div>
         </div>
 
-        <div class="grid col-span-1 w-full h-full xl:max-w-[450px] justify-self-end">
+        <div data-aos="fade-left" data-aos-duration="1500" data-aos-offset="200" class="grid col-span-1 w-full h-full xl:max-w-[450px] justify-self-end">
             <img 
                 src="/images/about/nuestraHistoria.webp" 
                 alt="Nuestra Historia" 
