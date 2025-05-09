@@ -5,7 +5,104 @@ const { currentLocale } = Astro;
 const i18n = getI18N( { currentLocale } );
 ---
 
-<section>
+
+<section class="relative w-full">
+    <div class="max-w-6xl mx-auto relative">
+        <!-- Grua SVG -->
+        <img id="grua" 
+            data-aos="fade-down" data-aos-duration="1000" data-aos-offset="200"
+            src="/images/home/gruag.webp" 
+            class="absolute z-10 transition-all duration-500 ease-in-out
+                w-10 md:w-20 ml-0.5 md:ml-9 lg:ml-32 -mt-16" 
+            alt="Logo grua" 
+        />
+
+        <!-- Títulos -->
+        <div class="text-center my-16 z-50" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200">
+            <h2 class="text-2xl md:text-5xl font-extrabold text-[#DF0A14] uppercase">
+                {i18n.HOME.SOLUCIONES_SECTION.TITLE1}
+            </h2>
+            <p class="text-2xl md:text-4xl font-bold text-[#233E1D] uppercase">
+                {i18n.HOME.SOLUCIONES_SECTION.TITLE2}
+            </p>
+        </div>
+
+        <!-- Cards -->
+        <div id="card-container" class="flex flex-wrap justify-center gap-12 lg:grid lg:grid-cols-3 lg:gap-20">
+            <div class="card" data-index="1">
+                <img src="/images/home/importacion.webp" alt="Importación y exportación" class="w-full h-full object-cover object-[75%_25%]" />
+                <div class="text-center absolute bottom-10 left-1/2 transform -translate-x-1/2">
+                    <h3 class="text-white text-2xl font-semibold">
+                        {i18n.HOME.SOLUCIONES_SECTION.CARD1}
+                    </h3>
+                </div>
+            </div>
+            <div class="card" data-index="2">
+                <img src="/images/home/logistica.webp" alt="Logística" class="w-full h-full object-cover" />
+                <div class="text-center absolute bottom-10 left-1/2 transform -translate-x-1/2">
+                    <h3 class="text-white text-2xl font-semibold">
+                        {i18n.HOME.SOLUCIONES_SECTION.CARD2}
+                    </h3>
+                </div>
+            </div>
+            <div class="card" data-index="3">
+                <img src="/images/home/optimizacion.webp" alt="Optimización" class="w-full h-full object-cover object-left" />
+                <div class="text-center absolute bottom-10 left-1/2 transform -translate-x-1/2">
+                    <h3 class="text-white text-2xl font-semibold">
+                        {i18n.HOME.SOLUCIONES_SECTION.CARD3}
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script is:inline data-astro-rerun>
+   
+    document.addEventListener("astro:page-load", () => {
+
+        const grua = document.getElementById('grua');
+        const cards = document.querySelectorAll('.card');
+        const cardContainer = document.getElementById('card-container');
+
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                if (window.innerWidth >= 1024) {
+                    const rect = card.getBoundingClientRect();
+                    const containerRect = cardContainer.getBoundingClientRect();
+                    // Ajuste adicional para centrar la grúa mejor
+                    const offset = rect.left - containerRect.left + (rect.width / 8.9) - (grua.clientWidth / 2.2);
+                    grua.style.transform = `translateX(${offset}px)`;
+                }
+            });
+        });
+
+        cardContainer.addEventListener('mouseleave', () => {
+            grua.style.transform = 'translateX(0)';
+        });
+    });
+    
+</script>
+
+
+<style>
+    .card {
+        position: relative;
+        width: 100%;
+        max-width: 350px;
+        height: 450px;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        transition: transform 0.3s ease;
+    }
+    .card:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+
+<!-- <section>
     <div class="max-w-6xl mx-auto">
 
         <img 
@@ -74,4 +171,4 @@ const i18n = getI18N( { currentLocale } );
         </div>
     
     </div>    
-</section>
+</section> -->

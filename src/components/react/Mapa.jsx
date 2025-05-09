@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const markers = [
     { id: 'monterrey', top: '30%', left: '47%', text: "Monterrey", img: '/images/mapa/Monterrey.webp' },
