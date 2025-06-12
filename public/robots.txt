@@ -1,0 +1,18 @@
+# robots.txt – DAGSA Logistics
+# Última actualización: 2025-06-11
+
+User-agent: *
+Allow: /
+
+# Rutas internas que no deben indexarse
+Disallow: /admin/
+Disallow: /api/
+Disallow: /tmp/
+Disallow: /drafts/
+
+# Evitar que se indexen resultados de búsqueda internos 
+Disallow: /*?s=*
+Disallow: /*?search=*
+
+# Sitemap principal generado por Astro (@astrojs/sitemap)
+Sitemap: https://dagsalogistics.com/sitemap-index.xml

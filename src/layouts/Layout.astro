@@ -1,132 +1,149 @@
 ---
-import Navbar from '../components/Navbar.astro'
-import Footer from '../components/Footer.astro'
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import WhatsappBtn from '../components/WhatsappBtn.astro';
 import '@fontsource-variable/roboto-condensed';
-//import robotoCondensedNormal from '@fontsource-variable/roboto-condensed/files/roboto-condensed-latin-wght-normal.woff2?url';
-import '../styles/global.css'
+import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
 import { getLangFromUrl } from '../i18n/utils';
-import WhatsappBtn from '../components/WhatsappBtn.astro';
 
 interface Props {
-	title: string;
+  title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props as Props;
 const lang = getLangFromUrl(Astro.url);
+const canonical = Astro.url.href.replace(/\/$/, '');
 ---
 
-<!doctype html>
-<html lang={ lang }>
-	<head>
-		
-		<!-- HTML Meta Tags -->
-		<meta charset="UTF-8" />
-		<meta name="description" content="DAGSA Logistics" />
-		<meta name="viewport" content="width=device-width" />
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="logística internacional en México, servicios de logística, importación y exportación de mercancías, agencia aduanal Veracruz, transporte terrestre, logística ferroviaria, optimización de la cadena de suministro, reducción de costos logísticos, logística automotriz, logística alimenticia, logística industrial, DAGSA Logistics" />$2<link rel="canonical" href={canonical} />
 
-		<!-- Google / Search Engine Tags -->
-		<meta itemprop="name" content={ title } />
-		<meta itemprop="description" content="DAGSA Logistics" />
-		<meta itemprop="image" content="https://res.cloudinary.com/carloslopezx6/image/upload/v1746220682/Clients/dagsa_logo_ojpcyl.webp" />
+    <!-- Primary Meta -->
+    <title>Logística internacional en México | DAGSA Logistics</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
 
-		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content={ title } />
-		<meta property="og:description" content="DAGSA Logistics" />
-		<meta property="og:image" content="https://res.cloudinary.com/carloslopezx6/image/upload/v1746220682/Clients/dagsa_logo_ojpcyl.webp" />
+    <!-- Hreflang (extend if more languages) -->
+    <link rel="alternate" hreflang="es" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={canonical} />
 
-		<!-- Twitter Meta Tags -->
-		<meta name="twitter:title" content={ title } />
-		<meta name="twitter:description" content="DAGSA Logistics" />
-		<meta name="twitter:image" content="https://res.cloudinary.com/carloslopezx6/image/upload/v1746220682/Clients/dagsa_logo_ojpcyl.webp" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://res.cloudinary.com/carloslopezx6/image/upload/w_1200,h_630,c_fill,q_auto/Clients/dagsa_logo_ojpcyl.webp" />
 
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://res.cloudinary.com/carloslopezx6/image/upload/w_1200,h_630,c_fill,q_auto/Clients/dagsa_logo_ojpcyl.webp" />
 
-		<title>{ title }</title>
+    <!-- Org Structured Data -->
+    <script type="application/ld+json" is:inline>{JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'LogisticsCompany',
+      name: 'DAGSA Logistics',
+      url: 'https://dagsalogistics.com/',
+      logo: 'https://res.cloudinary.com/carloslopezx6/image/upload/v1746220682/Clients/dagsa_logo_ojpcyl.webp',
+      description,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Isabel la Católica #1450 Altos. Col. Electricistas',
+        postalCode: '91916',
+        addressLocality: 'Veracruz',
+        addressRegion: 'Veracruz',
+        addressCountry: 'MX'
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+52-229-929-1485',
+        contactType: 'customer service',
+        email: 'comercial@dagsalogistics.com',
+        availableLanguage: ['es', 'en']
+      },
+      areaServed: {
+        '@type': 'Country',
+        name: 'MX'
+      }
+    }, null, 2)}</script>
 
+    <!-- Performance Hints -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
+    <link rel="dns-prefetch" href="https://res.cloudinary.com" />
 
-		<link rel="preload" href="/images/services/alimenticio.webp" as="image" />
-		<link rel="preload" href="/images/services/automotriz.webp" as="image" />
-		<link rel="preload" href="/images/services/carga.webp" as="image" />
-		<link rel="preload" href="/images/services/manufacturero.webp" as="image" />
-		<link rel="preload" href="/images/services/metalurgico.webp" as="image" />
-		<link rel="preload" href="/images/services/importacionyExportacionbien.webp" as="image" />
-		<link rel="preload" href="/images/services/logisticabien.webp" as="image" />
-		<link rel="preload" href="/images/services/sector.webp" as="image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
 
-		
-		<!-- <link
-			rel="preload"
-			as="font"
-			type="font/woff2"
-			href='@fontsource-variable/roboto-condensed'
-			crossorigin="anonymous"
-		/> -->
-		<!-- <link
-			rel="preload"
-			as="font"
-			type="font/woff2"
-			href={robotoCondensedNormal}
-			crossorigin="anonymous"
-		/> -->
+    <!-- Preload critical hero images (update paths as needed) -->
+    <link rel="preload" href="/images/services/alimenticio.webp" as="image" />
+    <link rel="preload" href="/images/services/automotriz.webp"   as="image" />
+    <link rel="preload" href="/images/services/carga.webp"        as="image" />
+    <link rel="preload" href="/images/services/manufacturero.webp" as="image" />
+    <link rel="preload" href="/images/services/metalurgico.webp"   as="image" />
+    <link rel="preload" href="/images/services/importacionyExportacionbien.webp" as="image" />
+    <link rel="preload" href="/images/services/logisticabien.webp" as="image" />
+    <link rel="preload" href="/images/services/sector.webp"        as="image" />
 
-		<ClientRouter />
+    <!-- Astro Client Router -->
+    <ClientRouter />
 
-		<script is:inline src="/scripts/i18nSectoresSlider.js"></script>
-		<script is:inline src="/scripts/initSectoresSlider.js"></script>
-		<script is:inline src="/scripts/i18nHomeSlider.js"></script>
-		<script is:inline src="/scripts/initHomeSlider.js"></script>
+    <!-- Local Scripts (inlined to avoid extra requests) -->
+    <script is:inline src="/scripts/i18nSectoresSlider.js"></script>
+    <script is:inline src="/scripts/initSectoresSlider.js"></script>
+    <script is:inline src="/scripts/i18nHomeSlider.js"></script>
+    <script is:inline src="/scripts/initHomeSlider.js"></script>
 
-		<!-- AOS -->
-		<script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	</head>
-	<body class="flex flex-col min-h-screen">
-		
-		<Navbar />
-			<main class="flex-grow">
-				<slot />
-				<WhatsappBtn />
-			</main>
-		<Footer />
-		
-		<script is:inline>
-			document.addEventListener("astro:page-load", () => {
-				AOS.init();
-			});
-		</script>
-	</body>
+    <!-- AOS (lazy loaded below the fold) -->
+    <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <Navbar />
+    <main class="flex-grow">
+      <slot />
+      <WhatsappBtn />
+    </main>
+    <Footer />
+
+    <!-- Init AOS after page load -->
+    <script is:inline>
+      document.addEventListener('astro:page-load', () => {
+        if (typeof AOS !== 'undefined') AOS.init();
+      });
+    </script>
+  </body>
 </html>
 
 <style>
-	html {
-        font-family: 'Roboto Condensed Variable', system-ui, sans-serif;
-		scroll-behavior: smooth;
+  html {
+    font-family: 'Roboto Condensed Variable', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  #header-nav {
+    animation: blur linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+  }
+  @keyframes blur {
+    to {
+      box-shadow: 0 5px 50px -5px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
     }
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-	#header-nav {
-        animation: blur linear both;
-        animation-timeline: scroll();
-        animation-range: 0 500px;
-    }
-
-	@keyframes blur {
-		to {
-			box-shadow:
-			0px 5px 50px -5px rgba(0, 0, 0, 0.1),
-			0px 0px 0 1px rgba(0, 0, 0, 0.3);
-			background: rgba(0, 0, 0, 0.3);
-			backdrop-filter: blur(10px);
-		}
-	}
-
-	html, body {
-		overflow-x: hidden;
-	}
+  }
 </style>
