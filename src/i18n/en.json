@@ -4,24 +4,28 @@
             "TITLE": "Home | DAGSA Logistics"
         },
         "SLIDE1": {
-            "TEXT1": "We maximize",
-            "TEXT2": "the efficiency of the supply chain, creating value"
+            "TEXT1": "We optimize",
+            "TEXT2": "the supply chain to create value"
         },
         "SLIDE2": {
-            "TEXT1": "Import, export, and logistics optimization:",
-            "TEXT2": "Comprehensive services that maximize the performance of your supply chain"
+            "TEXT1": "We offer integrated import and export services",
+            "TEXT2": "that provide comprehensive solutions to boost your supply chain performance"
         },
         "SLIDE3": {
-            "TEXT1": "We streamline",
-            "TEXT2": "logistics operations",
-            "TEXT3": "to maximize productivity and performance"
+            "TEXT1": "We expedite",
+            "TEXT2": "logistics activities",
+            "TEXT3": "to maintain the readiness of your inventories"
         },
         "SOLUCIONES_SECTION": {
             "TITLE1": "Comprehensive solutions",
             "TITLE2": "for your needs",
             "CARD1": "Import and export",
             "CARD2": "Logistics",
-            "CARD3": "Supply chain optimization"
+            "CARD3": "Supply chain optimization",
+            "LINKPOINTER": "services",
+            "LINK1": "import",
+            "LINK2": "logistic",
+            "LINK3": "supply"
         },
         "CLIENTES_SECTION_TEXT": "Clients who trust us"
     },
@@ -37,10 +41,9 @@
         "HISTORIA_SECTION": {
             "TITLE": "Our story",
             "DESCRIPTION": {
-                "TEXT1": "Despachos y Asesoría del Golfo (DAGSA)",
-                "TEXT2": "is a leading company in specialized logistics services, with a strategic focus at",
-                "TEXT3": "both national and international levels.",
-                "TEXT4": "We stand out for our experience in managing steel products, aluminum, and essential raw materials for the automotive industry, such as coils, plates, profiles, and similar products, offering comprehensive solutions that optimize the supply chain while adding value to our clients."
+                "TEXT1": "Established in 2002, we are experts in land, rail, and maritime logistics services, focusing on the food, metalworking, manufacturing, and automotive industries, with coverage across Mexico’s key logistical hubs.",
+                "TEXT2": "Our goal is to help the industry maintain inventory availability, ensuring products are always JUST IN TIME, whether in Mexico or internationally.",
+                "TEXT3": "Each operation results in a substantial reduction in our clients logistical expenses."
             }
         },
         "MISION_SECTION": {
@@ -143,8 +146,8 @@
             "TITLE": "Contact | DAGSA Logistics"
         },
         "SECTION1": {
-            "TEXT1": "Contact us",
-            "TEXT2": "and let’s start with your ideal logistics solution",
+            "TEXT1": "Contact us today",
+            "TEXT2": "and let's start your customized logistical solution",
             "TEXT3": "Please enter your contact information, and we will get back to you shortly"
         },
         "SECTION2": {
@@ -157,12 +160,31 @@
         }
     },
 
+    "PRIVACY_NOTICE": {
+        "LAYOUT": {
+            "TITLE": "Privacy notice | DAGSA Logistics"
+        }
+    },
+
+    "LEGAL_POLICY": {
+        "LAYOUT": {
+            "TITLE": "Legal policy | DAGSA Logistics"
+        }
+    },
+
+    "COOKIE_POLICY": {
+        "LAYOUT": {
+            "TITLE": "Cookie policy | DAGSA Logistics"
+        }
+    },
+
     "FOOTER": {
         "POLICIES": {
             "TEXT1": "Privacy notice",
             "TEXT2": "Legal policy",
             "TEXT3": "Cookie policy"
-        }
+        },
+        "DEVELOP": "Developed by"
     },
 
     "WHATSBTN": "botonWhatsappENG",

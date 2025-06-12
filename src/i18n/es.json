@@ -5,23 +5,27 @@
         },
         "SLIDE1": {
             "TEXT1": "Maximizamos",
-            "TEXT2": "la eficiencia de la cadena de suministros, generando valor"
+            "TEXT2": "la cadena de suministros generando valor"
         },
         "SLIDE2": {
-            "TEXT1": "Importación, exportación y optimización logística:",
-            "TEXT2": "Servicios integrales que maximizan el rendimiento de tu cadena de suministros"
+            "TEXT1": "Importación y exportación,",
+            "TEXT2": "servicios integrales que maximizan el rendimiento de tu cadena de suministros"
         },
         "SLIDE3": {
             "TEXT1": "Agilizamos las",
-            "TEXT2": "operaciones logísticas",
-            "TEXT3": "para maximizar la productividad y el rendimiento"
+            "TEXT2": "operaciones logísticas,",
+            "TEXT3": "garantizando la disponibilidad de tus inventarios"
         },
         "SOLUCIONES_SECTION": {
             "TITLE1": "Soluciones completas",
             "TITLE2": "Para tus necesidades",
             "CARD1": "Importación y exportación",
             "CARD2": "Logística",
-            "CARD3": "Optimización de la cadena de suministros"
+            "CARD3": "Optimización de la cadena de suministros",
+            "LINKPOINTER": "servicios",
+            "LINK1": "importacion",
+            "LINK2": "logistica",
+            "LINK3": "suministros"
         },
         "CLIENTES_SECTION_TEXT": "Clientes que confían en nosotros"
     },
@@ -37,10 +41,9 @@
         "HISTORIA_SECTION": {
             "TITLE": "Nuestra Historia",
             "DESCRIPTION": {
-                "TEXT1": "Despachos y Asesoría del Golfo (DAGSA)",
-                "TEXT2": "es una empresa líder en servicios de logística especializada, con un enfoque estratégico a",
-                "TEXT3": "nivel nacional e internacional.",
-                "TEXT4": "Destacamos por la experiencia en la gestión de productos de acero, aluminio, materias primas esenciales para la industria automotriz tales como bobinas, placas, perfiles y productos similares, ofreciendo soluciones integrales que optimizan la cadena de suministros agregando valor a sus clientes."
+                "TEXT1": "Desde el 2002 somos expertos en soluciones logísticas terrestres, ferroviarias y marítimas, especializándonos en los sectores alimenticio, metalúrgico, manufacturero y automotriz, con cobertura en los principales nodos logísticos de México.",
+                "TEXT2": "Ayudamos a la industria facilitar la disponibilidad de sus inventarios, para que sus productos estén siempre JUST IN TIME, tanto en México como en el extranjero.",
+                "TEXT3": "Logrando en cada operación, una reducción significativa en los costos logísticos de nuestros clientes."
             }
         },
         "MISION_SECTION": {
@@ -144,7 +147,7 @@
         },
         "SECTION1": {
             "TEXT1": "Contáctanos",
-            "TEXT2": "y empecemos con tu solución logística ideal",
+            "TEXT2": "y comencemos con tu solución logística",
             "TEXT3": "Ingresa tus datos y en breve te contactaremos"
         },
         "SECTION2": {
@@ -157,12 +160,31 @@
         }
     },
 
+    "PRIVACY_NOTICE": {
+        "LAYOUT": {
+            "TITLE": "Aviso de privacidad | DAGSA Logistics"
+        }
+    },
+
+    "LEGAL_POLICY": {
+        "LAYOUT": {
+            "TITLE": "Política legal | DAGSA Logistics"
+        }
+    },
+
+    "COOKIE_POLICY": {
+        "LAYOUT": {
+            "TITLE": "Política de cookies | DAGSA Logistics"
+        }
+    },
+
     "FOOTER": {
         "POLICIES": {
             "TEXT1": "Aviso de privacidad",
             "TEXT2": "Política legal",
             "TEXT3": "Política de cookies"
-        }
+        },
+        "DEVELOP": "Desarrollado por"
     },
 
     "WHATSBTN": "botonWhatsapp",

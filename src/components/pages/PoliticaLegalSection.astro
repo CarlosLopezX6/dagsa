@@ -1,0 +1,14 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PoliticaLegalContent from "../avisos-y-politicas/PoliticaLegalContent.astro";
+import { getI18N } from "../../i18n";
+
+const { currentLocale } = Astro;                   
+const i18n = getI18N( { currentLocale } );
+---
+
+<Layout title={ i18n.LEGAL_POLICY.LAYOUT.TITLE }>
+	<main>
+        <PoliticaLegalContent />
+    </main>
+</Layout>

@@ -63,9 +63,9 @@ const t = useTranslations(lang);
         </div>
 
         <!-- <div class="space-y-4 text-lg md:text-2xl xl:text-2xl mx-auto xl:mx-0 font-light items-center"> -->
-            <div class="space-y-4 text-lg md:text-xl lg:text-xl xl:text-base mx-auto xl:mx-0 font-light items-center">
+        <div class="space-y-4 text-base md:text-xl lg:text-xl xl:text-base mx-auto xl:mx-0 font-light items-center">
             <div class="flex">
-                <MapPinIcon class="size-5 text-[#DF0A14]"/>
+                <MapPinIcon class="size-6 text-[#DF0A14]"/>
                 <div class="ml-1">
                     <p>Isabel la Católica #1450 Altos. Col. Electricistas</p>
                     <p>C.P. 91916, Veracruz, Ver</p>
@@ -93,11 +93,26 @@ const t = useTranslations(lang);
     
         <div class="text-xl text-center xl:text-left underline underline-offset-1 text-[#657861]">
             <ul class="space-y-1">
-                <li><a href="/">{ i18n.FOOTER.POLICIES.TEXT1 }</a></li>
-                <li><a href="/">{ i18n.FOOTER.POLICIES.TEXT2 }</a></li>
-                <li><a href="/">{ i18n.FOOTER.POLICIES.TEXT3 }</a></li>
+                <li><a href="/aviso-privacidad">{ i18n.FOOTER.POLICIES.TEXT1 }</a></li>
+                <li><a href="/politica-legal">{ i18n.FOOTER.POLICIES.TEXT2 }</a></li>
+                <li><a href="/politica-cookies">{ i18n.FOOTER.POLICIES.TEXT3 }</a></li>
             </ul>
         </div>
 
+    </div>
+
+    <div class="px-12 md:px-24 lg:px-28 xl:px-36">
+        <div class="border-t border-[#657861] py-4">
+            <p class="text-center text-base text-white">
+                { i18n.FOOTER.DEVELOP }
+                <a 
+                    href="https://www.borealmarketing.mx" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                >
+                    Boreal Marketing Digital
+                </a>
+            </p>
+        </div>
     </div>
 </footer>

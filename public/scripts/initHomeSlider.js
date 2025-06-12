@@ -71,10 +71,10 @@ window.initHomeSlider = function (locale = 'es') {
         resetInterval();
     });
 
-    let interval = setInterval(nextSlide, 4000);
+    let interval = setInterval(nextSlide, 6000);
 
     function resetInterval() {
         clearInterval(interval);
-        interval = setInterval(nextSlide, 4000);
+        interval = setInterval(nextSlide, 6000);
     }
 };

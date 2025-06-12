@@ -18,40 +18,56 @@ const i18n = getI18N( { currentLocale } );
         />
 
         <div class="relative text-center my-16 z-20" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200">
-            <h2 class="text-2xl md:text-5xl font-extrabold text-[#DF0A14] uppercase">
+            <h2 class="text-xl md:text-5xl font-extrabold text-[#DF0A14] uppercase">
                 {i18n.HOME.SOLUCIONES_SECTION.TITLE1}
             </h2>
-            <p class="text-2xl md:text-4xl font-bold text-[#233E1D] uppercase">
+            <p class="text-xl md:text-4xl font-bold text-[#233E1D] uppercase">
                 {i18n.HOME.SOLUCIONES_SECTION.TITLE2}
             </p>
         </div>
 
         <div id="card-container" class="flex flex-wrap justify-center gap-12 lg:grid lg:grid-cols-3 lg:gap-20">
-            <div class="card" data-index="1">
+            <a 
+                href={`${i18n.HOME.SOLUCIONES_SECTION.LINKPOINTER}#${i18n.HOME.SOLUCIONES_SECTION.LINK1}`} 
+                class="card cursor-pointer" 
+                data-index="1"
+                data-astro-reload
+            >
                 <img src="/images/home/importacion.webp" alt="Importación y exportación" class="w-full h-full object-cover object-[75%_25%]" />
                 <div class="text-center absolute bottom-10 left-1/2 transform -translate-x-1/2">
                     <h3 class="text-white text-2xl font-semibold">
                         {i18n.HOME.SOLUCIONES_SECTION.CARD1}
                     </h3>
                 </div>
-            </div>
-            <div class="card" data-index="2">
+            </a>
+            <a 
+                href={`${i18n.HOME.SOLUCIONES_SECTION.LINKPOINTER}#${i18n.HOME.SOLUCIONES_SECTION.LINK2}`} 
+                class="card cursor-pointer" 
+                data-index="2"
+                data-astro-reload
+            >
                 <img src="/images/home/logistica.webp" alt="Logística" class="w-full h-full object-cover" />
                 <div class="text-center absolute bottom-10 left-1/2 transform -translate-x-1/2">
                     <h3 class="text-white text-2xl font-semibold">
                         {i18n.HOME.SOLUCIONES_SECTION.CARD2}
                     </h3>
                 </div>
-            </div>
-            <div class="card" data-index="3">
+            </a>
+            <a 
+                href={`${i18n.HOME.SOLUCIONES_SECTION.LINKPOINTER}#${i18n.HOME.SOLUCIONES_SECTION.LINK3}`} 
+                class="card cursor-pointer" 
+                data-index="3"
+                data-astro-reload
+            >
                 <img src="/images/home/optimizacion.webp" alt="Optimización" class="w-full h-full object-cover object-left" />
                 <div class="text-center absolute bottom-10 left-1/2 transform -translate-x-1/2">
                     <h3 class="text-white text-2xl font-semibold">
                         {i18n.HOME.SOLUCIONES_SECTION.CARD3}
                     </h3>
                 </div>
-            </div>
+            </a>
         </div>
+
     </div>
 </section>
 

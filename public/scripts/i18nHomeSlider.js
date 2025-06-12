@@ -5,33 +5,33 @@ window.i18nHomeSlider = function ({ currentLocale }) {
             HOME: {
                 SLIDE1: {
                     "TEXT1": "Maximizamos",
-                    "TEXT2": "la eficiencia de la cadena de suministros, generando valor"
+                    "TEXT2": "la cadena de suministros generando valor"
                 },
                 SLIDE2: {
-                    "TEXT1": "Importación, exportación y optimización logística:",
-                    "TEXT2": "Servicios integrales que maximizan el rendimiento de tu cadena de suministros"
+                    "TEXT1": "Importación y exportación,",
+                    "TEXT2": "servicios integrales que maximizan el rendimiento de tu cadena de suministros"
                 },
                 SLIDE3: {
                     "TEXT1": "Agilizamos las",
-                    "TEXT2": "operaciones logísticas",
-                    "TEXT3": "para maximizar la productividad y el rendimiento"
+                    "TEXT2": "operaciones logísticas,",
+                    "TEXT3": "garantizando la disponibilidad de tus inventarios"
                 },
             },
         },
         en: {
             HOME: {
                 SLIDE1: {
-                    TEXT1: "We maximize",
-                    TEXT2: "the efficiency of the supply chain, creating value"
+                    TEXT1: "We optimize",
+                    TEXT2: "the supply chain to create value"
                 },
                 SLIDE2: {
-                    TEXT1: "Import, export, and logistics optimization:",
-                    TEXT2: "Comprehensive services that maximize the performance of your supply chain"
+                    TEXT1: "We offer integrated import and export services",
+                    TEXT2: "that provide comprehensive solutions to boost your supply chain performance"
                 },
                 SLIDE3: {
-                    TEXT1: "We streamline",
-                    TEXT2: "logistics operations",
-                    TEXT3: "to maximize productivity and performance"
+                    TEXT1: "We expedite",
+                    TEXT2: "logistics activities",
+                    TEXT3: "to maintain the readiness of your inventories"
                 },
             },
         },
