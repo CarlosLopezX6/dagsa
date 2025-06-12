@@ -77,7 +77,7 @@ const t = useTranslations(lang);
             </div>
             <div class="flex items-center">
                 <MailIcon class="size-5 text-[#DF0A14] mr-1"/>
-                <p class="ml-1">comercial@despachoyasesoria.com</p>
+                <p class="ml-1"><a href=`mailto:comercial@dagsalogistics.com`>comercial@dagsalogistics.com</a></p>
             </div>
         </div>
             
@@ -93,9 +93,9 @@ const t = useTranslations(lang);
     
         <div class="text-xl text-center xl:text-left underline underline-offset-1 text-[#657861]">
             <ul class="space-y-1">
-                <li><a href="/aviso-privacidad">{ i18n.FOOTER.POLICIES.TEXT1 }</a></li>
-                <li><a href="/politica-legal">{ i18n.FOOTER.POLICIES.TEXT2 }</a></li>
-                <li><a href="/politica-cookies">{ i18n.FOOTER.POLICIES.TEXT3 }</a></li>
+                <li><a href={translatePath('/aviso-privacidad/')}>{t('nav.avisoPrivacidad')}</a></li>
+                <li><a href={translatePath('/politica-legal/')}>{t('nav.politicaLegal')}</a></li>
+                <li><a href={translatePath('/politica-cookies/')}>{t('nav.politicaCookies')}</a></li>
             </ul>
         </div>
 

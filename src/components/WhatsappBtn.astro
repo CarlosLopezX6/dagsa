@@ -6,10 +6,17 @@ const i18n = getI18N( { currentLocale } );
 ---
 
 
-<div class="fixed cursor-pointer bottom-2 -right-2 size-28 md:size-32 lg:size-36 z-10">
-    <img 
-        src=`/images/${ i18n.WHATSBTN }.webp` 
-        alt="whatsapp"
-        class="w-full h-full object-contain"
-    />
-</div>
+<a 
+  href="https://wa.link/ylue80" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  aria-label="WhatsApp"
+>
+    <div class="fixed cursor-pointer bottom-2 -right-2 size-28 md:size-32 lg:size-36 z-10">
+        <img 
+            src={`/images/${i18n.WHATSBTN}.webp`} 
+            alt="whatsapp"
+            class="w-full h-full object-contain"
+        />
+    </div>
+</a>
