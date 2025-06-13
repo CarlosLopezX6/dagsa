@@ -157,7 +157,8 @@
             "TEXT4": "Mensaje",
             "TEXT5": "Acepto los términos y las condiciones",
             "TEXT6": "Enviar"
-        }
+        },
+        "REQUIRED_FIELDS": "Campos obligatorios"
     },
 
     "PRIVACY_NOTICE": {
@@ -184,6 +185,7 @@
             "TEXT2": "Política legal",
             "TEXT3": "Política de cookies"
         },
+        "RIGHTS": "Todos los derechos reservados",
         "DEVELOP": "Desarrollado por"
     },
 

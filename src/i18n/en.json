@@ -157,7 +157,8 @@
             "TEXT4": "Message",
             "TEXT5": "I accept the terms and conditions",
             "TEXT6": "Send"
-        }
+        },
+        "REQUIRED_FIELDS": "Required fields"
     },
 
     "PRIVACY_NOTICE": {
@@ -184,6 +185,7 @@
             "TEXT2": "Legal policy",
             "TEXT3": "Cookie policy"
         },
+        "RIGHTS": "All rights reserved",
         "DEVELOP": "Developed by"
     },
 

@@ -74,6 +74,8 @@ const i18n = getI18N( { currentLocale } );
                     required
                 />
                 
+                <div class="mb-4 text-base md:text-xl lg:text-lg xl:text-lg text-white font-light">* { i18n.CONTACT.REQUIRED_FIELDS }</div>
+
                 <div class="flex flex-col lg:flex-row justify-between items-center gap-4 px-1">
                     <div class="flex items-center gap-2">
                         <label class="inline-flex items-center cursor-pointer relative">
@@ -104,8 +106,8 @@ const i18n = getI18N( { currentLocale } );
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
 
-                            <label for="terms" class="ml-4 text-base md:text-xl lg:text-lg xl:text-lg text-white font-light">
-                                *{ i18n.CONTACT.SECTION2.TEXT5 }
+                            <label for="terms" class="ml-2 text-sm sm:text-base md:text-xl lg:text-lg xl:text-lg text-white font-light">
+                                { i18n.CONTACT.SECTION2.TEXT5 }
                             </label>
 
                         </label>
@@ -123,7 +125,7 @@ const i18n = getI18N( { currentLocale } );
                     </button>
                 </div>
                 
-                <div class="mt-10" id="formAlertContainer"></div>
+                <div class="mt-8" id="formAlertContainer"></div>
                 
             </form>
 
