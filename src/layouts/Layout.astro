@@ -50,9 +50,38 @@ const canonicalEn = canonical.includes('/en') ? canonical : `${canonical}/en`;
 		<link rel="alternate" hreflang="x-default" href={canonicalEs} />
 
 		<!-- Google / Search Engine Tags -->
-		<meta itemprop="name" content={ title } />
+		<!-- <meta itemprop="name" content={ title } />
 		<meta itemprop="description" content={description} />
-		<meta itemprop="image" content="https://res.cloudinary.com/carloslopezx6/image/upload/v1746220682/Clients/dagsa_logo_ojpcyl.webp" />
+		<meta itemprop="image" content="https://res.cloudinary.com/carloslopezx6/image/upload/v1746220682/Clients/dagsa_logo_ojpcyl.webp" /> -->
+
+
+
+		<!-- CODIGO QUE PASARON -->
+
+		<!-- Google Search Console -->
+		<meta name="google-site-verification" content="6PB9Lq6CNJE4fvasXqTqZXOmElljd43aHe1GlngyGMc" />
+
+		<!-- Google Analytics Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GPBKMM0HQJ"></script>
+
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-GPBKMM0HQJ');
+		</script>
+
+		<!-- Google Tag Manager --> 
+		<script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KZW5LRD3');</script>
+
+		<!-- CODIGO QUE PASARON -->
+
+
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:site_name" content="DAGSA Logistics" />
@@ -152,7 +181,7 @@ const canonicalEn = canonical.includes('/en') ? canonical : `${canonical}/en`;
 					"@type": "ContactPoint",
 					"telephone": "+52-229-929-1485",
 					"contactType": "customer service",
-					"email": "comercial@dagsalogistics.com",
+					"email": "direccion@despachosyasesoria.com",
 					"availableLanguage": ["es", "en"]
 				},
 				"areaServed": {
@@ -174,6 +203,12 @@ const canonicalEn = canonical.includes('/en') ? canonical : `${canonical}/en`;
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	</head>
 	<body class="flex flex-col min-h-screen">
+
+		<!-- CODIGO QUE PASARON -->
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZW5LRD3"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- CODIGO QUE PASARON -->
 		
 		<Navbar />
 			<main class="flex-grow">
