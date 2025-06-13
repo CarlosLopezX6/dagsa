@@ -7,6 +7,11 @@ const i18n = getI18N( { currentLocale } );
 
 <section> 
 
+    <!-- Spinner overlay -->
+    <div id="spinnerOverlay" class="spinner-overlay hidden">
+        <div class="spinner"></div>
+    </div>
+
     <div 
         class="relative w-full bg-cover bg-center bg-no-repeat"
         style="background-image: url('/images/contact/bgContact.webp')"
@@ -34,30 +39,38 @@ const i18n = getI18N( { currentLocale } );
                 </p>
             </div>
     
-            <form class="space-y-4 pt-14">
+            <form id="contactForm" class="space-y-4 pt-14">
 
                 <input 
-                    type="text" 
                     placeholder=`${ i18n.CONTACT.SECTION2.TEXT1 }*` 
                     class="w-full p-3 rounded-xl border bg-white/80 text-xl lg:text-lg font-light" 
-                    required 
+                    type="text" 
+                    id="nombre" 
+                    name="nombre" 
+                    required
                 />
                 <input 
-                    type="email" 
                     placeholder=`${ i18n.CONTACT.SECTION2.TEXT2 }*`
                     class="w-full p-3 rounded-xl border bg-white/80 text-xl lg:text-lg font-light" 
-                    required 
+                    type="email" 
+                    id="correo" 
+                    name="correo" 
+                    required
                 />
                 <input 
-                    type="tel" 
                     placeholder=`${ i18n.CONTACT.SECTION2.TEXT3 }*` 
-                    class="w-full p-3 rounded-xl border bg-white/80 text-xl lg:text-lg font-light" 
+                    class="w-full p-3 rounded-xl border bg-white/80 text-xl lg:text-lg font-light"
+                    type="tel" 
+                    id="celular" 
+                    name="celular"
                     required 
                 />
                 <textarea 
                     placeholder=`${ i18n.CONTACT.SECTION2.TEXT4 }*` 
                     rows="2" 
-                    class="w-full p-3 rounded-xl border bg-white/80 text-xl lg:text-lg font-light" 
+                    class="w-full p-3 rounded-xl border bg-white/80 text-xl lg:text-lg font-light"
+                    id="motivo"
+                    name="motivo"
                     required
                 />
                 
@@ -65,14 +78,16 @@ const i18n = getI18N( { currentLocale } );
                     <div class="flex items-center gap-2">
                         <label class="inline-flex items-center cursor-pointer relative">
                             <input 
-                                type="checkbox"
                                 class="size-10 
                                     appearance-none border-4 rounded-xl cursor-pointer
                                     bg-[#d9d9d9] border-[#aeaeb0]
                                     hover:border-[#d9d9d9] hover:bg-[#d9d9d9]
                                     checked:bg-[#d9d9d9] checked:border-[#545454]
                                     transition-all duration-400 peer
-                                " 
+                                "
+                                type="checkbox"
+                                id="terminos" 
+                                name="terminos" 
                                 required 
                             />
 
@@ -96,16 +111,23 @@ const i18n = getI18N( { currentLocale } );
                         </label>
                     </div>
                     
-                    <button class="
-                        px-10 py-1 text-xl lg:text-base font-bold border-4 rounded-xl cursor-pointer uppercase
-                        text-[#545454] bg-[#d9d9d9] border-[#aeaeb0] 
-                        hover:border-[#d9d9d9] hover:bg-[#d9d9d9] transition-all duration-400 
-                    ">
+                    <button 
+                        class="
+                            px-10 py-1 text-xl lg:text-base font-bold border-4 rounded-xl cursor-pointer uppercase
+                            text-[#545454] bg-[#d9d9d9] border-[#aeaeb0] 
+                            hover:border-[#d9d9d9] hover:bg-[#d9d9d9] transition-all duration-400 
+                        "
+                        type="submit"
+                    >
                         { i18n.CONTACT.SECTION2.TEXT6 }
                     </button>
                 </div>
                 
+                <div class="mt-10" id="formAlertContainer"></div>
+                
             </form>
+
+
         </div>
     </div>
 
@@ -117,117 +139,144 @@ const i18n = getI18N( { currentLocale } );
     </div>
 </section>
 
+<style>
+    .spinner-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
 
-<!-- <section>
+    .spinner-overlay.hidden {
+        display: none !important;
+    }
 
-    <div 
-        class="relative w-full bg-cover bg-center bg-no-repeat"
-        style="background-image: url('/images/contact/bgContact.webp')"
-    >
-        
-        <div class="bg-black/45 w-full h-full absolute inset-0"></div>
-    
-        <div 
-            data-aos="fade-in" data-aos-duration="1000" 
-            class="relative z-10 px-8 lg:px-16 mx-auto py-20 pt-56 grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8"
-        >
-        
-            <div class="text-white">
-                <div class="font-bold">
-                    <p class="text-5xl md:text-5xl lg:text-7xl uppercase">
-                        { i18n.CONTACT.SECTION1.TEXT1 }
-                    </p>
-                    <p class="text-3xl md:text-3xl lg:text-5xl uppercase">
-                        { i18n.CONTACT.SECTION1.TEXT2 }
-                    </p>
-                </div>
-                
-                <p class="text-2xl md:text-2xl lg:text-4xl mt-16">
-                    { i18n.CONTACT.SECTION1.TEXT3 }.
-                </p>
-            </div>
-    
-            <form class="space-y-4">
+    .spinner {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #27b9c6;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+    }
 
-                <input 
-                    type="text" 
-                    placeholder=`${ i18n.CONTACT.SECTION2.TEXT1 }*` 
-                    class="w-full p-3 rounded-xl border bg-white/80 text-xl lg:text-2xl font-light" 
-                    required 
-                />
-                <input 
-                    type="email" 
-                    placeholder=`${ i18n.CONTACT.SECTION2.TEXT2 }*`
-                    class="w-full p-3 rounded-xl border bg-white/80 text-xl lg:text-2xl font-light" 
-                    required 
-                />
-                <input 
-                    type="tel" 
-                    placeholder=`${ i18n.CONTACT.SECTION2.TEXT3 }*` 
-                    class="w-full p-3 rounded-xl border bg-white/80 text-xl lg:text-2xl font-light" 
-                    required 
-                />
-                <textarea 
-                    placeholder=`${ i18n.CONTACT.SECTION2.TEXT4 }*` 
-                    rows="4" 
-                    class="w-full p-3 rounded-xl border bg-white/80 text-xl lg:text-2xl font-light" 
-                    required
-                />
-                
-                <div class="flex flex-col xl:flex-row justify-between items-center gap-4 px-1">
-                    <div class="flex items-center gap-2">
-                        <label class="inline-flex items-center cursor-pointer relative">
-                            <input 
-                                type="checkbox"
-                                class="size-12 
-                                    appearance-none border-4 rounded-xl cursor-pointer
-                                    bg-[#d9d9d9] border-[#aeaeb0]
-                                    hover:border-[#d9d9d9] hover:bg-[#d9d9d9]
-                                    checked:bg-[#d9d9d9] checked:border-[#545454]
-                                    transition-all duration-400 peer
-                                " 
-                                required 
-                            />
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
 
-                            <svg 
-                                class="
-                                    absolute size-10 text-[#545454] pointer-events-none left-1 top-1 opacity-0 
-                                    peer-checked:opacity-100 transition-opacity duration-100
-                                " 
-                                fill="none" 
-                                stroke="currentColor" 
-                                stroke-width="3" 
-                                viewBox="0 0 24 24"
-                            >
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
+    .alert {
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 1rem;
+        border-radius: 0.25rem;
+        /* restablece el color heredado */
+        color: initial !important;
+        text-align: center;
+        margin-top: 20px;
+    }
 
-                            <label for="terms" class="ml-4 text-base md:text-xl xl:text-2xl text-white font-light">
-                                *{ i18n.CONTACT.SECTION2.TEXT5 }
-                            </label>
+    .alert-success {
+        background-color: #d4edda !important;
+        color: #155724 !important;
+        border: 1px solid #c3e6cb !important;
+    }
 
-                        </label>
-                    </div>
-                    
-                    <button class="
-                        px-10 py-1 text-xl lg:text-2xl font-bold border-4 rounded-xl cursor-pointer uppercase
-                        text-[#545454] bg-[#d9d9d9] border-[#aeaeb0] 
-                        hover:border-[#d9d9d9] hover:bg-[#d9d9d9] transition-all duration-400 
+    .alert-danger {
+        background-color: #f8d7da !important;
+        color: #721c24 !important;
+        border: 1px solid #f5c6cb !important;
+    }
+</style>
+
+<script type="module">
+
+    const form = document.getElementById("contactForm");
+    const spinner = document.getElementById("spinnerOverlay");
+    const alertContainer = document.getElementById("formAlertContainer");
+
+    form.addEventListener("submit", async (e) => {
+
+        e.preventDefault();
+        alertContainer.innerHTML = "";
+        spinner.classList.remove("hidden");
+
+        const data = {
+            firstName: form.nombre.value.trim(),
+            //lastName: form.apellido.value.trim(),
+            phone: form.celular.value.trim(),
+            email: form.correo.value.trim(),
+            treatment: form.motivo.value,
+            privacy: form.terminos.checked,
+        };
+
+        try {
+
+            const res = await fetch("https://correos-guardianes-1.onrender.com/send-email",
+                {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                },
+            );
+
+            const json = await res.json();
+
+            if (res.ok) {
+                alertContainer.innerHTML = `
+                    <div style="
+                        background-color: #d4edda;
+                        color: #155724;
+                        padding: .75rem 1.25rem;
+                        border: 1px solid #c3e6cb;
+                        border-radius: .25rem;
+                        margin-bottom:1rem;
+                        text-align:center;
                     ">
-                        { i18n.CONTACT.SECTION2.TEXT6 }
-                    </button>
-                </div>
-                
-            </form>
-        </div>
-    </div>
+                        ¡Correo enviado correctamente!
+                    </div>
+                `;
+                form.reset();
+            } else {
+                alertContainer.innerHTML = `
+                    <div style="
+                        background-color: #f8d7da;
+                        color: #721c24;
+                        padding: .75rem 1.25rem;
+                        border: 1px solid #f5c6cb;
+                        border-radius: .25rem;
+                        margin-bottom:1rem;
+                        text-align:center;
+                    ">
+                        ${json.error || "Error enviando el correo."}
+                    </div>
+                `;
+            }
 
-    <div class="w-full">
-        <img 
-            src="/images/contact/footerContact.webp" 
-            alt="Footer Contact" class="w-full object-cover" 
-        />
-    </div>
-</section> -->
+        } catch {
+            alertContainer.innerHTML = `
+                <div style="
+                    background-color: #f8d7da;
+                    color: #721c24;
+                    padding: .75rem 1.25rem;
+                    border: 1px solid #f5c6cb;
+                    border-radius: .25rem;
+                    margin-bottom:1rem;
+                    text-align:center;
+                ">
+                    Error de red, inténtalo de nuevo.
+                </div>
+            `;
+        } finally {
+            spinner.classList.add("hidden");
+        }
+    });
+</script>
 
 

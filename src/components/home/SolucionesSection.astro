@@ -72,9 +72,12 @@ const i18n = getI18N( { currentLocale } );
 </section>
 
 
-<script is:inline data-astro-rerun>
-   
+<script is:inline>
     document.addEventListener("astro:page-load", () => {
+
+        const path = location.pathname;
+
+        if (path !== '/' && path !== '/es/' && path !== '/en/') return;    //Codigo solo corre mientras esta en el home.
 
         const grua = document.getElementById('grua');
         const cards = document.querySelectorAll('.card');
@@ -83,11 +86,10 @@ const i18n = getI18N( { currentLocale } );
         cards.forEach(card => {
             card.addEventListener('mouseenter', () => {
                 if (window.innerWidth >= 1024) {
-                    const rect = card.getBoundingClientRect();
-                    const containerRect = cardContainer.getBoundingClientRect();
-                    // Ajuste adicional para centrar la grúa mejor
-                    const offset = rect.left - containerRect.left + (rect.width / 8.9) - (grua.clientWidth / 2.2);
-                    grua.style.transform = `translateX(${offset}px)`;
+                const rect = card.getBoundingClientRect();
+                const containerRect = cardContainer.getBoundingClientRect();
+                const offset = rect.left - containerRect.left + (rect.width / 8.9) - (grua.clientWidth / 2.2);
+                grua.style.transform = `translateX(${offset}px)`;
                 }
             });
         });
@@ -95,8 +97,8 @@ const i18n = getI18N( { currentLocale } );
         cardContainer.addEventListener('mouseleave', () => {
             grua.style.transform = 'translateX(0)';
         });
+        
     });
-    
 </script>
 
 

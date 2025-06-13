@@ -10,43 +10,75 @@ import WhatsappBtn from '../components/WhatsappBtn.astro';
 
 interface Props {
 	title: string;
+	description?: string;        //La podemos pasar en cada pagina la descripcion, ingles y español o agarra la de por default.
 }
 
-const { title } = Astro.props;
+const { 
+	title, 
+	description="DAGSA Logistics, Logística internacional en México, expertos en soluciones logísticas terrestres, ferroviarias y marítimas, especializándonos en los sectores alimenticio, metalúrgico, manufacturero y automotriz, con cobertura en los principales nodos logísticos de México.",
+} = Astro.props as Props;
+
 const lang = getLangFromUrl(Astro.url);
+
+const canonical = Astro.url.href.replace(/\/$/, '');
+const canonicalEs = canonical.replace(/\/en(\/|$)/, '/'); // quita /en o /en/
+const canonicalEn = canonical.includes('/en') ? canonical : `${canonical}/en`;
 ---
 
 <!doctype html>
 <html lang={ lang }>
 	<head>
-		
-		<!-- HTML Meta Tags -->
+
+		<!-- Primary Meta -->
+		<title>{ title }</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonical} />
+
+		 <!-- HTML Meta Tags -->
 		<meta charset="UTF-8" />
-		<meta name="description" content="DAGSA Logistics" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="keywords" content="logística internacional en México, servicios de logística, importación y 
+		exportación de mercancías, agencia aduanal Veracruz, transporte terrestre, logística ferroviaria, 
+		optimización de la cadena de suministro, reducción de costos logísticos, logística automotriz, 
+		logística alimenticia, logística industrial, DAGSA Logistics" />
+
+		<!-- Hreflang (extend if more languages) -->
+		<!-- <link rel="alternate" hreflang="es" href={canonical} />
+		<link rel="alternate" hreflang="x-default" href={canonical} /> -->
+		<link rel="alternate" hreflang="es" href={canonicalEs} />
+		<link rel="alternate" hreflang="en" href={canonicalEn} />
+		<link rel="alternate" hreflang="x-default" href={canonicalEs} />
 
 		<!-- Google / Search Engine Tags -->
 		<meta itemprop="name" content={ title } />
-		<meta itemprop="description" content="DAGSA Logistics" />
+		<meta itemprop="description" content={description} />
 		<meta itemprop="image" content="https://res.cloudinary.com/carloslopezx6/image/upload/v1746220682/Clients/dagsa_logo_ojpcyl.webp" />
 
 		<!-- Open Graph / Facebook -->
+		<meta property="og:site_name" content="DAGSA Logistics" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={ title } />
-		<meta property="og:description" content="DAGSA Logistics" />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
 		<meta property="og:image" content="https://res.cloudinary.com/carloslopezx6/image/upload/v1746220682/Clients/dagsa_logo_ojpcyl.webp" />
 
 		<!-- Twitter Meta Tags -->
 		<meta name="twitter:title" content={ title } />
-		<meta name="twitter:description" content="DAGSA Logistics" />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:image" content="https://res.cloudinary.com/carloslopezx6/image/upload/v1746220682/Clients/dagsa_logo_ojpcyl.webp" />
 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		
 		<meta name="generator" content={Astro.generator} />
 
-		<title>{ title }</title>
+		<!-- Performance Hints -->
+		<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+		<link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
+		<link rel="dns-prefetch" href="https://res.cloudinary.com" />
 
 
+		
 		<link rel="preload" href="/images/services/alimenticio.webp" as="image" />
 		<link rel="preload" href="/images/services/automotriz.webp" as="image" />
 		<link rel="preload" href="/images/services/carga.webp" as="image" />
@@ -56,7 +88,6 @@ const lang = getLangFromUrl(Astro.url);
 		<link rel="preload" href="/images/services/logisticabien.webp" as="image" />
 		<link rel="preload" href="/images/services/sector.webp" as="image" />
 
-		
 		<!-- <link
 			rel="preload"
 			as="font"
@@ -71,6 +102,65 @@ const lang = getLangFromUrl(Astro.url);
 			href={robotoCondensedNormal}
 			crossorigin="anonymous"
 		/> -->
+
+		<!-- Org Structured Data -->
+		<!-- <script type="application/ld+json" is:inline>{JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'LogisticsCompany',
+			name: 'DAGSA Logistics',
+			url: 'https://dagsalogistics.com/',
+			logo: 'https://res.cloudinary.com/carloslopezx6/image/upload/v1746220682/Clients/dagsa_logo_ojpcyl.webp',
+			description,
+			address: {
+				'@type': 'PostalAddress',
+				streetAddress: 'Isabel la Católica #1450 Altos. Col. Electricistas',
+				postalCode: '91916',
+				addressLocality: 'Veracruz',
+				addressRegion: 'Veracruz',
+				addressCountry: 'MX'
+			},
+			contactPoint: {
+				'@type': 'ContactPoint',
+				telephone: '+52-229-929-1485',
+				contactType: 'customer service',
+				email: 'comercial@dagsalogistics.com',
+				availableLanguage: ['es', 'en']
+			},
+			areaServed: {
+				'@type': 'Country',
+				name: 'MX'
+			}
+		}, null, 2)}</script> -->
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "LogisticsCompany",
+				"name": "DAGSA Logistics",
+				"url": "https://dagsalogistics.com/",
+				"logo": "https://res.cloudinary.com/carloslopezx6/image/upload/v1746220682/Clients/dagsa_logo_ojpcyl.webp",
+				"description": "DAGSA Logistics, Logística internacional en México, expertos en soluciones logísticas terrestres, ferroviarias y marítimas, especializándonos en los sectores alimenticio, metalúrgico, manufacturero y automotriz, con cobertura en los principales nodos logísticos de México.",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Isabel la Católica #1450 Altos. Col. Electricistas",
+					"postalCode": "91916",
+					"addressLocality": "Veracruz",
+					"addressRegion": "Veracruz",
+					"addressCountry": "MX"
+				},
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"telephone": "+52-229-929-1485",
+					"contactType": "customer service",
+					"email": "comercial@dagsalogistics.com",
+					"availableLanguage": ["es", "en"]
+				},
+				"areaServed": {
+					"@type": "Country",
+					"name": "MX"
+				}
+			}
+		</script>
 
 		<ClientRouter />
 
